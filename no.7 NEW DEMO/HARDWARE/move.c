@@ -108,7 +108,21 @@ void LockupPoint(float POS_X, float POS_Y, float POS_YAW)
 	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = point_Y_pid.output;
 }
 
+//µã¸ú×Ù
+void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max)
+{
+		YawAdjust(POS_YAW);
+	 
+	  float error;
+	  //¼ÆËãÎó²î
+	error = sqrt((ROBOT_REAL_POS_DATA.POS_X - POS_X) * (ROBOT_REAL_POS_DATA.POS_X - POS_X) + (ROBOT_REAL_POS_DATA.POS_Y - POS_Y) * (ROBOT_REAL_POS_DATA.POS_Y- POS_Y));  // ¼ÆËãÎó²î
+	point_pid.outputmax = ABS(V_max);
+  PID_position_PID_calculation_by_error(&point_pid, error);
 
+	ROBOT_TARGET_VELOCITY_DATA.Vx_RPM =-point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_X - POS_X) / error;
+	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = -point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_Y - POS_Y) / error;   
+
+}
 
 
 /**
@@ -117,7 +131,7 @@ void LockupPoint(float POS_X, float POS_Y, float POS_YAW)
 * @param  distance_robot:ÓëÖù×ÓµÄ¾àÀë£¬thetha:ÓëÖù×ÓµÄ½Ç¶ÈÖµ£¬distance_object:Öù×ÓÓëÄ¿±êµãµÄ¾àÀë(ÔÚÒ»¸ö¹Ì¶¨µÄÔ²ÉÏ)
 * @retval 
 */
-void LaserLockPoint(int distance_robot , int thetha ,int distance_object)//µ¥Î»£ºcm
+void LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_max)//µ¥Î»£ºcm
 {
 	int distance_object1=distance_object*10;
 	int distance_robot1=distance_robot*10;
@@ -130,7 +144,7 @@ void LaserLockPoint(int distance_robot , int thetha ,int distance_object)//µ¥Î»£
 	{
 		float POS_X=ROBOT_REAL_POS_DATA.POS_X-true_distance*sin(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
 		float POS_Y=ROBOT_REAL_POS_DATA.POS_Y+true_distance*cos(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
-		LockupPoint(POS_X, POS_Y, thetha+ROBOT_REAL_POS_DATA.POS_YAW);
+		moving_point_track(POS_X, POS_Y, thetha+ROBOT_REAL_POS_DATA.POS_YAW,V_max);
 	}
 }
 

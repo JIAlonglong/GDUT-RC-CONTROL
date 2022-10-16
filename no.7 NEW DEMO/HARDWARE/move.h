@@ -77,7 +77,8 @@ void YawAdjust(float Target_angle);
 void PDController(PATH_TYPEDEF target_point, ROBOT_REAL_POS robot_now_pos);
 int PathPlan(float t_real, float t_target, int num, float *X, float *Y, float *Yaw);
 void LockupPoint(float POS_X, float POS_Y, float POS_YAW);
-void LaserLockPoint(int distance_robot , int thetha ,int distance_object);//单位：cm
+void LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_max);//单位：cm
+void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max);
 float Caculate_K(float dx, float dy);
 void POINT_FOLLOW(TRCK_PIONTS *PIONTS, TRCK_PIONTS *Last_PIONTS);
 float Vector_Unitization(float k, u8 num);

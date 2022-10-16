@@ -75,7 +75,7 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										LaserLockPoint(ros_vx , ros_vy ,100);//单位cm
+										LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
 									}
 								}
 					 if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1460&&AIR_R_LONG<1540)//打低档和中档
@@ -84,7 +84,7 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										LaserLockPoint(ros_vx , ros_vy ,100);//单位cm
+										LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
 									}
 								}
 					  if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1850&&AIR_R_LONG<2100)//打低档和低档
@@ -93,7 +93,7 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										LaserLockPoint(ros_vx , ros_vy ,100);//单位cm
+										LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
 									}
 								}
 				      if(ROCK_R_Y>1850)//拉右边油杆
