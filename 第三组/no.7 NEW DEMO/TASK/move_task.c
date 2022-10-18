@@ -29,10 +29,6 @@ void move_task(void *pvParameters)
 									else
                   {
 										MOVE_STATE=MOVE_STOP;
-										if(MOVE_STATE==MOVE_STOP)
-										{
-											//激光矫正
-										}
 									}
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&AIR_R_LONG>1460&&AIR_R_LONG<1540)//打中档和中档
@@ -46,10 +42,6 @@ void move_task(void *pvParameters)
 									else
                   {
 										MOVE_STATE=MOVE_STOP;
-										if(MOVE_STATE==MOVE_STOP)
-										{
-											//激光矫正
-										}
 									}	
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&AIR_R_LONG>1850&&AIR_R_LONG<2100)//打中档和低档
@@ -63,10 +55,6 @@ void move_task(void *pvParameters)
 									else
                   {
 										MOVE_STATE=MOVE_STOP;
-										if(MOVE_STATE==MOVE_STOP)
-										{
-											//激光矫正
-										}
 									}
 			          }
 			        if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>800&&AIR_R_LONG<1200)//打低档和高档
@@ -75,7 +63,12 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+										Jiguang_Action_Update(0.0,0.0);//用激光更新数据
+										if(Jiguang_Action_Update)
+										{
+											LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+										
+										}
 									}
 								}
 					 if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1460&&AIR_R_LONG<1540)//打低档和中档
@@ -84,18 +77,26 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+										Jiguang_Action_Update(0.0,0.0);//用激光更新数据
+										if(Jiguang_Action_Update)
+										{
+											LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+										
+										}
 									}
 								}
 					  if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1850&&AIR_R_LONG<2100)//打低档和低档
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_TH;//射对方柱子
 									//LOCK LockupPoint
-									if(MOVE_STATE==MOVE_STOP)
-									{
-										LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
-									}
+									Jiguang_Action_Update(0.0,0.0);//用激光更新数据
+										if(Jiguang_Action_Update)
+										{
+											LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+										
+										}
 								}
+								
 				      if(ROCK_R_Y>1850)//拉右边油杆
 				      {
 						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
@@ -143,3 +144,4 @@ void move_task(void *pvParameters)
 
 
 }
+

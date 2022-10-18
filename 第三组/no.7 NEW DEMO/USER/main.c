@@ -16,12 +16,13 @@ int main(void)
 	MoveInit();	
 	FSM_Init();                                     //机器人状态机初始化
 	CAN1_Init();																		// CAN1
-	CAN2_Init();																		// CAN2	
+	AK80_Init();
 	M3508_Motor_Init();															// M3508电机
 	TMOTOR_init();                                  //初始化电调
 	delay_ms(500);
 	bsp_Air_Init();                                 //初始化航模遥控
 	uart_init(115200);                              //初始化与上位机通讯
+	usart2_init(115200);                                  //与激光模块通讯
 	TIM2_GET_TIM_Init();
 	Location_Init();
 	delay_ms(500);

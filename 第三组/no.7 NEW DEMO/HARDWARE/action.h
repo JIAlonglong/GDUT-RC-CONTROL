@@ -46,6 +46,7 @@ void Update_Action_gl_position(float value[6]);
 void Action_Uart_init(u32 baud_rate);
 void USART_SendString(USART_TypeDef* USARTx, char *DataString);
 void USART_SendFloat(USART_TypeDef* USARTx, char *DataString,float DateFloat);
+extern int Jiguang_Action_Update(float i,float j);
 void Update_J(float New_J);
 void Update_X(float New_X);
 void Update_Y(float New_Y);

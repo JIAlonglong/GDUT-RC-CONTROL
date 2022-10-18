@@ -20,11 +20,13 @@
 #include "ros.h"
 #include "laser.h"
 #include "imu_location.h"
+#include "jiguang.h"
 
 //电机配置
 #include "pid.h"
 #include "m3508.h"
 #include "TMOTOR.h"
+#include "MIT.h"
 
 //robot底盘运动
 #include "control.h"

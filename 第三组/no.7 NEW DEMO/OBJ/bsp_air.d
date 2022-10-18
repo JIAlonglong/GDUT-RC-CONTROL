@@ -58,9 +58,11 @@
 ..\obj\bsp_air.o: ..\ROS\ros.h
 ..\obj\bsp_air.o: ..\HARDWARE\laser.h
 ..\obj\bsp_air.o: ..\HARDWARE\imu_location.h
+..\obj\bsp_air.o: ..\HARDWARE\jiguang.h
 ..\obj\bsp_air.o: ..\HARDWARE\pid.h
 ..\obj\bsp_air.o: ..\HARDWARE\m3508.h
 ..\obj\bsp_air.o: ..\HARDWARE\TMOTOR.h
+..\obj\bsp_air.o: ..\HARDWARE\MIT.h
 ..\obj\bsp_air.o: ..\HARDWARE\control.h
 ..\obj\bsp_air.o: ..\HARDWARE\action.h
 ..\obj\bsp_air.o: ..\HARDWARE\move.h

@@ -58,9 +58,11 @@
 ..\obj\auto_task.o: ..\ROS\ros.h
 ..\obj\auto_task.o: ..\HARDWARE\laser.h
 ..\obj\auto_task.o: ..\HARDWARE\imu_location.h
+..\obj\auto_task.o: ..\HARDWARE\jiguang.h
 ..\obj\auto_task.o: ..\HARDWARE\pid.h
 ..\obj\auto_task.o: ..\HARDWARE\m3508.h
 ..\obj\auto_task.o: ..\HARDWARE\TMOTOR.h
+..\obj\auto_task.o: ..\HARDWARE\MIT.h
 ..\obj\auto_task.o: ..\HARDWARE\control.h
 ..\obj\auto_task.o: ..\HARDWARE\action.h
 ..\obj\auto_task.o: ..\HARDWARE\move.h
