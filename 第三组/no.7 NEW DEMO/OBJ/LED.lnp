@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu Cortex-M4.fp
 "..\obj\main.o"
 "..\obj\stm32f4xx_it.o"
 "..\obj\system_stm32f4xx.o"
@@ -15,6 +15,7 @@
 "..\obj\laser.o"
 "..\obj\imu_location.o"
 "..\obj\ladrc.o"
+"..\obj\tshooting.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"

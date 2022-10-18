@@ -19,7 +19,8 @@ int main(void)
 	CAN2_Init();																		// CAN2	
 	M3508_Motor_Init();															// M3508电机
 	TMOTOR_init();                                  //初始化电调
-	delay_ms(500);
+	TMOTORSHOOTING_Init();                          //初始化发射机构电机
+	delay_ms(500);                                  
 	bsp_Air_Init();                                 //初始化航模遥控
 	uart_init(115200);                              //初始化与上位机通讯
 	TIM2_GET_TIM_Init();

@@ -25,6 +25,7 @@
 #include "pid.h"
 #include "m3508.h"
 #include "TMOTOR.h"
+#include "tshooting.h"
 
 //robotµ◊≈Ã‘À∂Ø
 #include "control.h"
