@@ -16,7 +16,8 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 				UP_ARM_NOW_MOTION=&UP_INIT;
 				U8_contorl_1(0);
 				U8_contorl_2(0);
-			
+				AK80_Speed_Control(AK80_ID1,0);
+				AK80_Speed_Control(AK80_ID2,0);		
 				break;
 			
 			
@@ -25,7 +26,8 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 				UP_ARM_NOW_MOTION=&UP_ON;
 				U8_contorl_1(0);
 				U8_contorl_2(0);
-			
+				AK80_Speed_Control(AK80_ID1,0);
+				AK80_Speed_Control(AK80_ID2,0);	
 				break;
 			
 		 
@@ -35,7 +37,8 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 				UP_ARM_NOW_MOTION=&UP_ON;
 				U8_contorl_1(0);
 				U8_contorl_2(0);
-			
+				AK80_Speed_Control(AK80_ID1,0);
+				AK80_Speed_Control(AK80_ID2,0);				
 				break;
 			
 			
@@ -44,7 +47,8 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 				UP_ARM_NOW_MOTION=&UP_ON;
 				U8_contorl_1(0);
 				U8_contorl_2(0);
-			
+				AK80_Speed_Control(AK80_ID1,0);
+				AK80_Speed_Control(AK80_ID2,0);				
 				break;
 			
 			default:

@@ -231,18 +231,13 @@ void Update_Action_gl_position(float value[6])
 	//累加得出最终真实位置
 	ACTION_GL_POS_DATA.REAL_X += (ACTION_GL_POS_DATA.DELTA_POS_X);                       //action安装时跟场地坐标系有一个变换
 	ACTION_GL_POS_DATA.REAL_Y += (ACTION_GL_POS_DATA.DELTA_POS_Y);
-	
-	//变换到底盘中心
-//	Robot_Chassis.Position[x] =  ACTION_GL_POS_DATA.REAL_X * sin(ROBOT_REAL_POS_DATA.POS_YAW* PI / 180) ;
-//	Robot_Chassis.Position[y] =  ACTION_GL_POS_DATA.REAL_Y * cos(ROBOT_REAL_POS_DATA.POS_YAW* PI / 180) ;
 
 // 偏航角直接赋值（逆时针为正，顺时针为负）
   ROBOT_REAL_POS_DATA.POS_YAW = ACTION_GL_POS_DATA.ANGLE_Z - OFFSET_YAW;
 	
-	//消除机械误差,赋值X、Y
 //消除机械误差,赋值X、Y
-	ROBOT_REAL_POS_DATA.POS_X = (ACTION_GL_POS_DATA.POS_X + INSTALL_ERROR_Y * sin(ROBOT_REAL_POS_DATA.POS_YAW * PI / 180.0f));
-	ROBOT_REAL_POS_DATA.POS_Y = (ACTION_GL_POS_DATA.POS_Y - INSTALL_ERROR_Y * (cos(ROBOT_REAL_POS_DATA.POS_YAW * PI / 180.0f)-1));
+	ROBOT_REAL_POS_DATA.POS_X = (ACTION_GL_POS_DATA.REAL_X + INSTALL_ERROR_Y * sin(ROBOT_REAL_POS_DATA.POS_YAW * PI / 180.0f));
+	ROBOT_REAL_POS_DATA.POS_Y = (ACTION_GL_POS_DATA.REAL_Y - INSTALL_ERROR_Y * (cos(ROBOT_REAL_POS_DATA.POS_YAW * PI / 180.0f)-1));
 	
 	//action矫正(实验)
 //	ACTION_GL_POS_DATA.POS_X=new_x;
@@ -252,6 +247,22 @@ void Update_Action_gl_position(float value[6])
 	
 	
 	
+}
+
+int Jiguang_Action_Update(float i,float j)
+{
+	YawAdjust(0);
+	if(YawAdjust)
+		{
+			
+			ACTION_GL_POS_DATA.REAL_X=UPDATE_x;
+	    ACTION_GL_POS_DATA.REAL_Y=UPDATE_y;
+			ROBOT_REAL_POS_DATA.POS_X=i;
+			ROBOT_REAL_POS_DATA.POS_Y=j;
+		 return 1;
+		}
+	else
+		return 0;
 }
 
 void Action_Uart_init(u32 baud_rate)

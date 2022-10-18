@@ -58,9 +58,11 @@
 ..\obj\robot_state_task.o: ..\ROS\ros.h
 ..\obj\robot_state_task.o: ..\HARDWARE\laser.h
 ..\obj\robot_state_task.o: ..\HARDWARE\imu_location.h
+..\obj\robot_state_task.o: ..\HARDWARE\jiguang.h
 ..\obj\robot_state_task.o: ..\HARDWARE\pid.h
 ..\obj\robot_state_task.o: ..\HARDWARE\m3508.h
 ..\obj\robot_state_task.o: ..\HARDWARE\TMOTOR.h
+..\obj\robot_state_task.o: ..\HARDWARE\MIT.h
 ..\obj\robot_state_task.o: ..\HARDWARE\control.h
 ..\obj\robot_state_task.o: ..\HARDWARE\action.h
 ..\obj\robot_state_task.o: ..\HARDWARE\move.h

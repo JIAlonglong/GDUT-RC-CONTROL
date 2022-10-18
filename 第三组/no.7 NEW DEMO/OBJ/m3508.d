@@ -58,9 +58,11 @@
 ..\obj\m3508.o: ..\ROS\ros.h
 ..\obj\m3508.o: ..\HARDWARE\laser.h
 ..\obj\m3508.o: ..\HARDWARE\imu_location.h
+..\obj\m3508.o: ..\HARDWARE\jiguang.h
 ..\obj\m3508.o: ..\HARDWARE\pid.h
 ..\obj\m3508.o: ..\HARDWARE\m3508.h
 ..\obj\m3508.o: ..\HARDWARE\TMOTOR.h
+..\obj\m3508.o: ..\HARDWARE\MIT.h
 ..\obj\m3508.o: ..\HARDWARE\control.h
 ..\obj\m3508.o: ..\HARDWARE\action.h
 ..\obj\m3508.o: ..\HARDWARE\move.h

@@ -58,9 +58,11 @@
 ..\obj\motorvelocitycurve.o: ..\ROS\ros.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\laser.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\imu_location.h
+..\obj\motorvelocitycurve.o: ..\HARDWARE\jiguang.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\pid.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\m3508.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\TMOTOR.h
+..\obj\motorvelocitycurve.o: ..\HARDWARE\MIT.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\control.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\action.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\move.h

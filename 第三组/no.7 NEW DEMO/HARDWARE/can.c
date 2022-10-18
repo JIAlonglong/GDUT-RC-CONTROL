@@ -123,12 +123,12 @@ void CAN2_Init(void)
 	CAN_DeInit(CAN2);
 	CAN_StructInit(&can);
 	
-	can.CAN_TTCM = DISABLE;//非时间触发通信模式 
-	can.CAN_ABOM = DISABLE;//使用该功能可以在节点出错离线后适时的自动恢复，不需要软件干预。
-	can.CAN_AWUM = DISABLE;//使用该功能可以在监测到总线活动后自动唤醒
-	can.CAN_NART = ENABLE;//DISABLE代表的是使用自动重传的功能，ENABLE是代表不使用自动重传的功能 
-	can.CAN_RFLM = DISABLE;//是否锁定FIFO,如果锁定，FIFO溢出会丢弃新数据；如果不锁定，FIFO溢出时，新数据会覆盖旧数据。
-	can.CAN_TXFP = DISABLE;//使能时会以存入发送邮箱的顺序进行发送，失能时，以报文ID的优先级发送。
+	can.CAN_TTCM = DISABLE;
+	can.CAN_ABOM = DISABLE;
+	can.CAN_AWUM = DISABLE;
+	can.CAN_NART = DISABLE;
+	can.CAN_RFLM = DISABLE;
+	can.CAN_TXFP = ENABLE;
 	can.CAN_Mode = CAN_Mode_Normal;
 	can.CAN_SJW  = CAN_SJW_1tq;
 	can.CAN_BS1 = CAN_BS1_9tq;
@@ -177,10 +177,20 @@ void CAN2_TX_IRQHandler(void)
     }
 }
 
+
 /*WAITING_TEST*/
 // CAN2的FIFO0接受中断函数
 void CAN2_RX0_IRQHandler(void)
 {
+  CanRxMsg CAN2_RX0_message;  // 临时存放接受数据的结构体
 	
-
+  if(CAN_GetITStatus(CAN2,CAN_IT_FMP0)!= RESET) 
+  {
+		CAN_Receive(CAN2, CAN_FIFO0, &CAN2_RX0_message);  // 读取数据
+		CAN_ClearITPendingBit(CAN2, CAN_IT_FMP0);
+		
+		AK80_update_info(&CAN2_RX0_message);//AK80接受
+  }
+	
 }
+

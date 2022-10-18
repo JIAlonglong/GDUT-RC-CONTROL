@@ -73,12 +73,14 @@ typedef struct PATH_FOLLOW
 extern ROBOT_CHASSIS Robot_Chassis;
 
 void MoveInit(void);
-void YawAdjust(float Target_angle);
+int YawAdjust(float Target_angle);
 void PDController(PATH_TYPEDEF target_point, ROBOT_REAL_POS robot_now_pos);
 int PathPlan(float t_real, float t_target, int num, float *X, float *Y, float *Yaw);
 void LockupPoint(float POS_X, float POS_Y, float POS_YAW);
-void LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_max);//单位：cm
+int LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_max);//单位：cm
 void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max);
+void near_pillar(float POS_X, float POS_Y, float POS_YAW,float V_max);
+int PointTracking(float Target_x,float Target_y,float Target_yaw);
 float Caculate_K(float dx, float dy);
 void POINT_FOLLOW(TRCK_PIONTS *PIONTS, TRCK_PIONTS *Last_PIONTS);
 float Vector_Unitization(float k, u8 num);
@@ -89,6 +91,13 @@ void model_ChassisRoute_Init(void);
 extern PID yaw_pid;
 extern PID point_X_pid;
 extern PID point_Y_pid;
+extern PID laser_X_pid;
+extern PID laser_Y_pid;
+extern PID point_traker_x_pid;
+extern PID point_traker_y_pid;
+extern PID point_traker_yaw_pid;
+extern PID point_traker_ladar_y_pid;
+extern PID point_traker_ladar_x_pid;
 
 extern MOVE_STATE_ITEMS MOVE_STATE;
 

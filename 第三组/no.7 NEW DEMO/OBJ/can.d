@@ -58,9 +58,11 @@
 ..\obj\can.o: ..\ROS\ros.h
 ..\obj\can.o: ..\HARDWARE\laser.h
 ..\obj\can.o: ..\HARDWARE\imu_location.h
+..\obj\can.o: ..\HARDWARE\jiguang.h
 ..\obj\can.o: ..\HARDWARE\pid.h
 ..\obj\can.o: ..\HARDWARE\m3508.h
 ..\obj\can.o: ..\HARDWARE\TMOTOR.h
+..\obj\can.o: ..\HARDWARE\MIT.h
 ..\obj\can.o: ..\HARDWARE\control.h
 ..\obj\can.o: ..\HARDWARE\action.h
 ..\obj\can.o: ..\HARDWARE\move.h

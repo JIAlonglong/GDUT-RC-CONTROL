@@ -3,6 +3,11 @@
 
 #define START   0X11
 
+//数据接收暂存区
+extern unsigned char  receiveBuff[32];         
+//通信协议常量
+extern const unsigned char header[2];
+extern const unsigned char ender[2];
 
 //从linux接收并解析数据到参数地址中
 extern int usartReceiveOneData(int *p_VXSet,int *p_VYSet,int *p_VZSet,int *p_update_X,int *p_update_Y,int *p_update_Z,unsigned char *p_crtlFlag);

@@ -529,6 +529,26 @@
               <FileType>5</FileType>
               <FilePath>..\HARDWARE\ladrc.h</FilePath>
             </File>
+            <File>
+              <FileName>MIT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\MIT.c</FilePath>
+            </File>
+            <File>
+              <FileName>MIT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HARDWARE\MIT.h</FilePath>
+            </File>
+            <File>
+              <FileName>jiguang.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\jiguang.c</FilePath>
+            </File>
+            <File>
+              <FileName>jiguang.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HARDWARE\jiguang.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
