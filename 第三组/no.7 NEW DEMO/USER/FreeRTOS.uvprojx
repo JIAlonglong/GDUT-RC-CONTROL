@@ -147,7 +147,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>2</TargetSelection>
+          <TargetSelection>12</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -449,11 +449,6 @@
               <FilePath>..\HARDWARE\control.c</FilePath>
             </File>
             <File>
-              <FileName>m3508.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\m3508.c</FilePath>
-            </File>
-            <File>
               <FileName>move.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\move.c</FilePath>
@@ -512,6 +507,11 @@
               <FileName>pstwo.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HARDWARE\pstwo.h</FilePath>
+            </File>
+            <File>
+              <FileName>m3508.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\m3508.c</FilePath>
             </File>
             <File>
               <FileName>TMOTOR.c</FileName>
