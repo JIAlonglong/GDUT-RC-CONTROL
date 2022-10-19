@@ -3,7 +3,7 @@
 ..\obj\m3508.o: ..\SYSTEM\sys\sys.h
 ..\obj\m3508.o: ..\USER\stm32f4xx.h
 ..\obj\m3508.o: ..\CORE\core_cm4.h
-..\obj\m3508.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\m3508.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\m3508.o: ..\CORE\core_cmInstr.h
 ..\obj\m3508.o: ..\CORE\core_cmFunc.h
 ..\obj\m3508.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\m3508.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\m3508.o: ..\SYSTEM\delay\delay.h
 ..\obj\m3508.o: ..\SYSTEM\usart\usart.h
-..\obj\m3508.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\m3508.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\m3508.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\m3508.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\m3508.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\m3508.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\m3508.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\m3508.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\m3508.o: ..\HARDWARE\move.h
 ..\obj\m3508.o: ..\HARDWARE\path.h
 ..\obj\m3508.o: ..\FSM\FSM.h
-..\obj\m3508.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\m3508.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\m3508.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-..\obj\m3508.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\m3508.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\m3508.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\m3508.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\m3508.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\m3508.o: ..\HARDWARE\LADRC.h

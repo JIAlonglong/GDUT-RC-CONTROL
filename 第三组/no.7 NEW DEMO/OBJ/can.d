@@ -3,7 +3,7 @@
 ..\obj\can.o: ..\SYSTEM\sys\sys.h
 ..\obj\can.o: ..\USER\stm32f4xx.h
 ..\obj\can.o: ..\CORE\core_cm4.h
-..\obj\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\can.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\can.o: ..\CORE\core_cmInstr.h
 ..\obj\can.o: ..\CORE\core_cmFunc.h
 ..\obj\can.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\can.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\can.o: ..\SYSTEM\delay\delay.h
 ..\obj\can.o: ..\SYSTEM\usart\usart.h
-..\obj\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\can.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\can.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\can.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\can.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\can.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\can.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\can.o: ..\HARDWARE\move.h
 ..\obj\can.o: ..\HARDWARE\path.h
 ..\obj\can.o: ..\FSM\FSM.h
-..\obj\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-..\obj\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\can.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\can.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\can.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\can.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\can.o: ..\HARDWARE\LADRC.h
