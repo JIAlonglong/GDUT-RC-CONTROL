@@ -254,6 +254,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>ACTION_GL_POS_DATA</ItemText>
         </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ROBOT_REAL_POS</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>
