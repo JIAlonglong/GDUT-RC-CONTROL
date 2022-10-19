@@ -26,7 +26,7 @@ void MoveInit(void)
   PID_parameter_init(&point_X_pid, 10.0 , 0.25 , 0.1 , 20.0, 0, 1);
 	PID_parameter_init(&point_Y_pid, 45.0 , 0.25 , 0.1 , 80.0, 0, 1);
 	//yawadjust
-	PID_parameter_init(&yaw_pid, 50,5, 0.1, 2000, 0, 1);
+	PID_parameter_init(&yaw_pid, 1.5,0.002, 1.0, 200, 0, 1);
 	
 	//¼¤¹â
 	PID_parameter_init(&laser_X_pid, 3,0, 0.5, 100, 0, 10);
@@ -41,8 +41,8 @@ void MoveInit(void)
 	PID_parameter_init(&point_traker_ladar_x_pid, 3,0, 0.1, 2000, 0, 1);
 	
 	
-	PID_parameter_init(&point_pid, 1.5, 0.002, 1, 0, 0, -1); // µ÷pid max1.5  p1.5 i0.002 d1
-	PID_parameter_init(&arc_pid, 2, 0.4, 1, 0.6, 0, 50);    //Ô²»¡¸ú×Ùpid     p 10? i0.01  ËÀÇø50£¿
+	PID_parameter_init(&point_pid, 1.5,0.002, 1.0, 0, 0, -1); // µ÷pid max1.5  p1.5 i0.002 d1
+	PID_parameter_init(&arc_pid, 1.5,0.002, 1.0, 0.1, 0, 10);    //Ô²»¡¸ú×Ùpid     p 10? i0.01  ËÀÇø50£¿
 }
 
 

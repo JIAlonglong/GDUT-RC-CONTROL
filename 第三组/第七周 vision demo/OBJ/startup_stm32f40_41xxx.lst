@@ -869,12 +869,11 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=..\obj\startup_stm32f40_41xxx.d -o..\obj\startup_stm32f40_41xxx
-.o -I"C:\Users\24954\Desktop\刘家隆—RC代码包\jialong\第七周 vision demo\USER\R
-TE\_FreeRTOS" -ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Devic
-e\ST\STM32F4xx\Include -ID:\keil5\ARM\CMSIS\Include -ID:\keil5\ARM\PACK\Keil\ST
-M32F4xx_DFP\2.11.0\Device\Include --predefine="__UVISION_VERSION SETA 522" --pr
-edefine="STM32F407xx SETA 1" --list=..\obj\startup_stm32f40_41xxx.lst ..\CORE\s
-tartup_stm32f40_41xxx.s
+.o -I"D:\GitHub kk\GDUT-RC-CONTROL\第三组\第七周 vision demo\USER\RTE" -IC:\Kei
+l_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0 -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Kei
+l_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Device\Include --predefine="__UVISION_V
+ERSION SETA 514" --predefine="STM32F407xx SETA 1" --list=..\obj\startup_stm32f4
+0_41xxx.lst ..\CORE\startup_stm32f40_41xxx.s
 
 
 

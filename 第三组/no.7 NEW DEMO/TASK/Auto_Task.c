@@ -22,7 +22,7 @@ void Auto_Task(void *pvParameters)
 				break;
 			case MOVE_1_CAST_POINT:
 				move_time_counter += 0.01f;
-			if(PathPlan(move_time_counter, 7.0, 9+1, X, Y, Yaw))
+			if(PathPlan(move_time_counter, 8.0, 9+1, X, Y, Yaw))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;

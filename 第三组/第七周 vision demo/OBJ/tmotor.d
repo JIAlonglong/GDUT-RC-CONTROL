@@ -3,7 +3,7 @@
 ..\obj\tmotor.o: ..\SYSTEM\sys\sys.h
 ..\obj\tmotor.o: ..\USER\stm32f4xx.h
 ..\obj\tmotor.o: ..\CORE\core_cm4.h
-..\obj\tmotor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\tmotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\tmotor.o: ..\CORE\core_cmInstr.h
 ..\obj\tmotor.o: ..\CORE\core_cmFunc.h
 ..\obj\tmotor.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\tmotor.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\tmotor.o: ..\SYSTEM\delay\delay.h
 ..\obj\tmotor.o: ..\SYSTEM\usart\usart.h
-..\obj\tmotor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\tmotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\tmotor.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\tmotor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\tmotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\tmotor.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\tmotor.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\tmotor.o: ..\FreeRTOS\include\portable.h
@@ -63,7 +63,7 @@
 ..\obj\tmotor.o: ..\HARDWARE\action.h
 ..\obj\tmotor.o: ..\HARDWARE\move.h
 ..\obj\tmotor.o: ..\HARDWARE\path.h
-..\obj\tmotor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\tmotor.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\tmotor.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
-..\obj\tmotor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\tmotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\tmotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\tmotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\tmotor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

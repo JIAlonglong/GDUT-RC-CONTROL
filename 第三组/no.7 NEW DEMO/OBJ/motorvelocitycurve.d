@@ -3,7 +3,7 @@
 ..\obj\motorvelocitycurve.o: ..\SYSTEM\sys\sys.h
 ..\obj\motorvelocitycurve.o: ..\USER\stm32f4xx.h
 ..\obj\motorvelocitycurve.o: ..\CORE\core_cm4.h
-..\obj\motorvelocitycurve.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\motorvelocitycurve.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\motorvelocitycurve.o: ..\CORE\core_cmInstr.h
 ..\obj\motorvelocitycurve.o: ..\CORE\core_cmFunc.h
 ..\obj\motorvelocitycurve.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\motorvelocitycurve.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\motorvelocitycurve.o: ..\SYSTEM\delay\delay.h
 ..\obj\motorvelocitycurve.o: ..\SYSTEM\usart\usart.h
-..\obj\motorvelocitycurve.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\motorvelocitycurve.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\motorvelocitycurve.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\motorvelocitycurve.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\motorvelocitycurve.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\motorvelocitycurve.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\motorvelocitycurve.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\motorvelocitycurve.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\move.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\path.h
 ..\obj\motorvelocitycurve.o: ..\FSM\FSM.h
-..\obj\motorvelocitycurve.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\motorvelocitycurve.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\motorvelocitycurve.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
-..\obj\motorvelocitycurve.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\motorvelocitycurve.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\motorvelocitycurve.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\motorvelocitycurve.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\motorvelocitycurve.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\motorvelocitycurve.o: ..\HARDWARE\LADRC.h
