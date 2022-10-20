@@ -79,7 +79,7 @@ int PathPlan(float t_real, float t_target, int num, float *X, float *Y, float *Y
 void LockupPoint(float POS_X, float POS_Y, float POS_YAW);
 int LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_max);//µ¥Î»£ºcm
 int moving_point_track(float real_time,float POS_X, float POS_Y, float POS_YAW,float V_max);
-void near_pillar(float POS_X, float POS_Y, float POS_YAW,float V_max);
+void near_pillar(float distance,float POS_YAW,float V_max);
 int PointTracking(float Target_x,float Target_y,float Target_yaw);
 float Caculate_K(float dx, float dy);
 void POINT_FOLLOW(TRCK_PIONTS *PIONTS, TRCK_PIONTS *Last_PIONTS);
@@ -98,6 +98,7 @@ extern PID point_traker_y_pid;
 extern PID point_traker_yaw_pid;
 extern PID point_traker_ladar_y_pid;
 extern PID point_traker_ladar_x_pid;
+extern PID yaw_pid_ladar;
 
 extern MOVE_STATE_ITEMS MOVE_STATE;
 

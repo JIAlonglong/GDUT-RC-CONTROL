@@ -16,7 +16,7 @@ void move_task(void *pvParameters)
 				{
 					if(AIR_L_LONG>950&&AIR_L_LONG<1250&&AIR_R_LONG>950&&AIR_R_LONG<1250)//打高档和高档
 								{
-									Free_Control();//遥控自由控制
+										Free_Control();//遥控自由控制
 								}
 					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>800&&ROCK_L_X<1200)//打中档和左边左
 			          {
