@@ -40,10 +40,9 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										Jiguang_Action_Update(0.0,0.0);//用激光更新数据
-										if(Jiguang_Action_Update)
+										if(LaserLockPoint(ros_vx , ros_vy ,100,200))//单位cm
 										{
-											LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+											//Jiguang_Action_Update(0.0,0.0);
 										
 										}
 									}
@@ -54,10 +53,9 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										Jiguang_Action_Update(0.0,0.0);//用激光更新数据
-										if(Jiguang_Action_Update)
+										if(LaserLockPoint(ros_vx , ros_vy ,100,200))//单位cm
 										{
-											LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+											//Jiguang_Action_Update(0.0,0.0);
 										
 										}
 									}
@@ -66,10 +64,9 @@ void move_task(void *pvParameters)
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_TH;//射对方柱子
 									//LOCK LockupPoint
-									Jiguang_Action_Update(0.0,0.0);//用激光更新数据
-										if(Jiguang_Action_Update)
+										if(LaserLockPoint(ros_vx , ros_vy ,100,200))//单位cm
 										{
-											LaserLockPoint(ros_vx , ros_vy ,100,200);//单位cm
+											//Jiguang_Action_Update(0.0,0.0);
 										
 										}
 								}

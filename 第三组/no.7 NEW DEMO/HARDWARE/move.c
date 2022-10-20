@@ -106,7 +106,7 @@ int YawAdjust(float Target_angle)
    
    // 直接利用PID输出角速度
    PID_position_PID_calculation_by_error(&yaw_pid, error);
-   ROBOT_TARGET_VELOCITY_DATA.W_RPM = -yaw_pid.output;	// 底盘角速度 单位：rad/s
+   ROBOT_TARGET_VELOCITY_DATA.W_RPM = yaw_pid.output;	// 底盘角速度 单位：rad/s
 	 
 	  if(ABS(error)<1)return 0;
 	 else 
@@ -149,7 +149,7 @@ int moving_point_track(float real_time,float POS_X, float POS_Y, float POS_YAW,f
 	ROBOT_TARGET_VELOCITY_DATA.Vx_RPM =-point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_X - POS_X) / error;
 	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = -point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_Y - POS_Y) / error;
 	
-	if(ROBOT_REAL_POS_DATA.POS_X - POS_X==0&&ROBOT_REAL_POS_DATA.POS_Y - POS_Y==0)
+	if(ABS(ROBOT_REAL_POS_DATA.POS_X - POS_X)<10&&ABS(ROBOT_REAL_POS_DATA.POS_Y - POS_Y)<10)
 	{
 		return 1;
 	}
@@ -177,7 +177,7 @@ int LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_
 		float POS_X=ROBOT_REAL_POS_DATA.POS_X-true_distance*sin(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
 		float POS_Y=ROBOT_REAL_POS_DATA.POS_Y+true_distance*cos(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
 		near_pillar(POS_X, POS_Y, thetha+ROBOT_REAL_POS_DATA.POS_YAW,V_max);
-	if(distance_robot1==distance_object1)
+	if(ABS(distance_robot1-distance_object1)<10)//误差在1cm
 		  return 1;
 	else
 		  return 0;
