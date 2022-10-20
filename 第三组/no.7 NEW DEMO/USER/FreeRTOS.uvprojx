@@ -669,6 +669,11 @@
               <FileType>1</FileType>
               <FilePath>..\TASK\MotorVelocityCurve.c</FilePath>
             </File>
+            <File>
+              <FileName>data_update.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\TASK\data_update.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

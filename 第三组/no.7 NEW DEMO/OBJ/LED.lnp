@@ -33,6 +33,7 @@
 "..\obj\robot_state_task.o"
 "..\obj\move_task.o"
 "..\obj\motorvelocitycurve.o"
+"..\obj\data_update.o"
 "..\obj\misc.o"
 "..\obj\stm32f4xx_adc.o"
 "..\obj\stm32f4xx_can.o"

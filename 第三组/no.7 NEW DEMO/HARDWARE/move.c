@@ -136,7 +136,7 @@ void LockupPoint(float POS_X, float POS_Y, float POS_YAW)
 }
 
 //µã¸ú×Ù
-void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max)
+int moving_point_track(float real_time,float POS_X, float POS_Y, float POS_YAW,float V_max)
 {
 		YawAdjust(POS_YAW);
 	 
@@ -147,8 +147,13 @@ void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max)
   PID_position_PID_calculation_by_error(&point_pid, error);
 
 	ROBOT_TARGET_VELOCITY_DATA.Vx_RPM =-point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_X - POS_X) / error;
-	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = -point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_Y - POS_Y) / error;   
-
+	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = -point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_Y - POS_Y) / error;
+	
+	if(ROBOT_REAL_POS_DATA.POS_X - POS_X==0&&ROBOT_REAL_POS_DATA.POS_Y - POS_Y==0)
+	{
+		return 1;
+	}
+		return 0;
 }
 
 

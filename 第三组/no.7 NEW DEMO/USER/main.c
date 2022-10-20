@@ -8,6 +8,7 @@ TaskHandle_t Robot_state_task_Handler;
 TaskHandle_t Auto_Task_Handler;
 TaskHandle_t move_task_Handler;
 TaskHandle_t Motor_Control_Handler;
+TaskHandle_t data_update_Handler;
 int action_start_flag=0;
 int main(void)
 {
@@ -72,7 +73,14 @@ void start_task(void *pvParameters)
 							(uint16_t       )128,
 							(void*          )NULL,
 							(UBaseType_t    )5,
-							(TaskHandle_t*  )&Motor_Control_Handler);							
+							(TaskHandle_t*  )&Motor_Control_Handler);	
+  //5.date_update(上位机)
+	xTaskCreate((TaskFunction_t )data_update, 							
+							(const char*    )"data_update",   
+							(uint16_t       )128,
+							(void*          )NULL,
+							(UBaseType_t    )6,
+							(TaskHandle_t*  )&data_update_Handler);							
 	vTaskDelete(StartTask_Handler); //删除开始任务
   taskEXIT_CRITICAL();            //退出临界区
 }

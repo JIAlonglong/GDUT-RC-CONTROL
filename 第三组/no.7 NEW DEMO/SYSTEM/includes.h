@@ -160,10 +160,12 @@ extern TaskHandle_t Robot_state_task_Handler;
 extern TaskHandle_t Auto_Task_Handler;
 extern TaskHandle_t move_task_Handler;
 extern TaskHandle_t Motor_Control_Handler;
+extern TaskHandle_t data_update_Handler;
 
 void start_task(void *pvParameters);
 void Robot_state_task(void *pvParamerters);
 void Auto_Task(void *pvParameters);
 void move_task(void *pvParameters);
 void Motor_Control(void *pvParameters);
+void data_update(void *pvParameters);
 #endif

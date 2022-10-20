@@ -7,7 +7,6 @@ void Auto_Task(void *pvParameters)
   static portTickType move_xLastWakeTime;
 	const portTickType move_xFrequency = pdMS_TO_TICKS(10); // 延时10ms
 	move_xLastWakeTime = xTaskGetTickCount(); // 获取当前计数值
-//	float move_time_counter = 0;
 	
 	while(1)
 	{
@@ -30,7 +29,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_1_SHOOT:
 				move_time_counter += 0.01f;
-			if(PathPlan(move_time_counter, 10.0, 5+1, X1, Y1, Yaw1))
+			if(moving_point_track(move_time_counter,-5183, 450, 180,500))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -38,7 +37,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_2_SHOOT:
 				move_time_counter += 0.01f;
-			if(PathPlan(move_time_counter, 10.0, 5+1, X2, Y2, Yaw2))
+			if(moving_point_track(move_time_counter,-3461, 450, 180,500))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -46,7 +45,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_3_SHOOT:
 				move_time_counter += 0.01f;
-			if(PathPlan(move_time_counter, 10.0, 5+1, X3, Y3, Yaw3))
+			if(moving_point_track(move_time_counter,-1677, 450, 180,500))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -54,7 +53,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_1_RESTART:
 				move_time_counter += 0.01f;
-			if(PathPlan(move_time_counter, 10.0, 5+1, X4, Y4, Yaw4))
+			if(moving_point_track(move_time_counter,-6309, 301, 180,500))//取环点
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;

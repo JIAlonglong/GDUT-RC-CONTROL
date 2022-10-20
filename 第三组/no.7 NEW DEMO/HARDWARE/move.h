@@ -78,7 +78,7 @@ void PDController(PATH_TYPEDEF target_point, ROBOT_REAL_POS robot_now_pos);
 int PathPlan(float t_real, float t_target, int num, float *X, float *Y, float *Yaw);
 void LockupPoint(float POS_X, float POS_Y, float POS_YAW);
 int LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_max);//µ¥Î»£ºcm
-void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max);
+int moving_point_track(float real_time,float POS_X, float POS_Y, float POS_YAW,float V_max);
 void near_pillar(float POS_X, float POS_Y, float POS_YAW,float V_max);
 int PointTracking(float Target_x,float Target_y,float Target_yaw);
 float Caculate_K(float dx, float dy);
