@@ -16,22 +16,27 @@ void move_task(void *pvParameters)
 				{
 					if(AIR_L_LONG>950&&AIR_L_LONG<1250&&AIR_R_LONG>950&&AIR_R_LONG<1250)//打高档和高档
 								{
+										ROBOT_SHOOTING=SHOOT_WAITING;
 										Free_Control();//遥控自由控制
 								}
 					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>800&&ROCK_L_X<1200)//打中档和左边左
 			          {
+										ROBOT_SHOOTING=SHOOT_INIT;
 										MOVE_STATE=MOVE_1_RESTART;//取环点
 			          }
 					  if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>1850&&ROCK_L_Y<2150)//打中档和左边上
 			          {
+										ROBOT_SHOOTING=SHOOT_INIT;
 										MOVE_STATE=MOVE_1_SHOOT;
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>1850&&ROCK_L_X<2150)//打中档和左边右
 			          {
+										ROBOT_SHOOTING=SHOOT_INIT;
 										MOVE_STATE=MOVE_2_SHOOT;
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>850&&ROCK_L_Y<1250)//打中档和左边下
 			          {
+										ROBOT_SHOOTING=SHOOT_INIT;
 										MOVE_STATE=MOVE_3_SHOOT;
 			          }
 			        if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>800&&AIR_R_LONG<1200)//打低档和高档

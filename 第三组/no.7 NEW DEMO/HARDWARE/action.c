@@ -251,8 +251,7 @@ void Update_Action_gl_position(float value[6])
 
 int Jiguang_Action_Update(float i,float j)
 {
-	YawAdjust(0);
-	if(YawAdjust)
+	if(YawAdjust(0))
 		{
 			
 			ACTION_GL_POS_DATA.REAL_X=UPDATE_x;
