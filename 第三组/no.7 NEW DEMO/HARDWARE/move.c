@@ -2,6 +2,7 @@
 
 MOVE_STATE_ITEMS MOVE_STATE;
 PID yaw_pid;
+PID yaw_pid_ladar;
 PID point_X_pid;
 PID point_Y_pid;
 PID laser_X_pid;
@@ -23,10 +24,10 @@ PID point_traker_ladar_x_pid;
 */
 void MoveInit(void)
 {
-  PID_parameter_init(&point_X_pid, 10.0 , 0.25 , 0.1 , 20.0, 0, 1);
-	PID_parameter_init(&point_Y_pid, 45.0 , 0.25 , 0.1 , 80.0, 0, 1);
+  PID_parameter_init(&point_X_pid, 0.025, 0.001, 0.33, 0.3, 0.05, -1);
+	PID_parameter_init(&point_Y_pid, 0.025, 0.001, 0.33, 0.3, 0.05, -1);
 	//yawadjust
-	PID_parameter_init(&yaw_pid, 50,5, 0.1, 2000, 0, 1);
+	PID_parameter_init(&yaw_pid, 1.5,0.002, 1.0, 200, 0, 1);
 	
 	//激光
 	PID_parameter_init(&laser_X_pid, 3,0, 0.5, 100, 0, 10);
@@ -34,15 +35,15 @@ void MoveInit(void)
 	
 	
 	//点对点追踪
-	PID_parameter_init(&point_traker_x_pid, 10,0, 0.1, 2000, 0, 10);
-	PID_parameter_init(&point_traker_y_pid, 10,0, 0.1, 2000, 0, 10);
-	PID_parameter_init(&point_traker_yaw_pid, 10,0, 0.1, 2000, 0, 1);
-	PID_parameter_init(&point_traker_ladar_y_pid, 3,0, 0.1, 2000, 0, 1);
-	PID_parameter_init(&point_traker_ladar_x_pid, 3,0, 0.1, 2000, 0, 1);
+	PID_parameter_init(&point_traker_x_pid, 3,0, 0.1, 500, 0, 10);
+	PID_parameter_init(&point_traker_y_pid, 3,0, 0.1, 500, 0, 10);
+	PID_parameter_init(&point_traker_yaw_pid, 10,0, 0.1, 500, 0, 1);
+	PID_parameter_init(&point_traker_ladar_y_pid, 0.5,0, 0.1, 1000, 0, 5);
+	PID_parameter_init(&point_traker_ladar_x_pid, 2,0, 0.1, 1000, 0, 5);
+	PID_parameter_init(&yaw_pid_ladar, 50,0, 0.1, 1000, 0, 1);
 	
-	
-	PID_parameter_init(&point_pid, 1.5, 0.002, 1, 0, 0, -1); // 调pid max1.5  p1.5 i0.002 d1
-	PID_parameter_init(&arc_pid, 2, 0.4, 1, 0.6, 0, 50);    //圆弧跟踪pid     p 10? i0.01  死区50？
+	PID_parameter_init(&point_pid, 1.5,0.002, 1.0, 0, 0, -1); // 调pid max1.5  p1.5 i0.002 d1
+	PID_parameter_init(&arc_pid, 1.5,0.002, 1.0, 0.1, 0, 10);    //圆弧跟踪pid     p 10? i0.01  死区50？
 }
 
 
@@ -106,7 +107,7 @@ int YawAdjust(float Target_angle)
    
    // 直接利用PID输出角速度
    PID_position_PID_calculation_by_error(&yaw_pid, error);
-   ROBOT_TARGET_VELOCITY_DATA.W_RPM = -yaw_pid.output;	// 底盘角速度 单位：rad/s
+   ROBOT_TARGET_VELOCITY_DATA.W_RPM = yaw_pid.output;	// 底盘角速度 单位：rad/s
 	 
 	  if(ABS(error)<1)return 0;
 	 else 
@@ -136,7 +137,7 @@ void LockupPoint(float POS_X, float POS_Y, float POS_YAW)
 }
 
 //点跟踪
-void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max)
+int moving_point_track(float real_time,float POS_X, float POS_Y, float POS_YAW,float V_max)
 {
 		YawAdjust(POS_YAW);
 	 
@@ -147,8 +148,13 @@ void moving_point_track(float POS_X, float POS_Y, float POS_YAW,float V_max)
   PID_position_PID_calculation_by_error(&point_pid, error);
 
 	ROBOT_TARGET_VELOCITY_DATA.Vx_RPM =-point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_X - POS_X) / error;
-	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = -point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_Y - POS_Y) / error;   
-
+	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = -point_pid.output * 1.0f*(ROBOT_REAL_POS_DATA.POS_Y - POS_Y) / error;
+	
+	if(ABS(ROBOT_REAL_POS_DATA.POS_X - POS_X)<10&&ABS(ROBOT_REAL_POS_DATA.POS_Y - POS_Y)<10)
+	{
+		return 1;
+	}
+		return 0;
 }
 
 
@@ -169,30 +175,33 @@ int LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_
 	}
 	else	
 	{
-		float POS_X=ROBOT_REAL_POS_DATA.POS_X-true_distance*sin(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
-		float POS_Y=ROBOT_REAL_POS_DATA.POS_Y+true_distance*cos(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
-		near_pillar(POS_X, POS_Y, thetha+ROBOT_REAL_POS_DATA.POS_YAW,V_max);
-	if(distance_robot1==distance_object1)
-		  return 1;
-	else
-		  return 0;
+//		float POS_X=ROBOT_REAL_POS_DATA.POS_X-true_distance*sin(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
+//		float POS_Y=ROBOT_REAL_POS_DATA.POS_Y+true_distance*cos(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
+//		near_pillar(POS_X, POS_Y, thetha+ROBOT_REAL_POS_DATA.POS_YAW,V_max);
+		if(ABS(distance_robot1-distance_object1)<10||distance_robot1==0)//误差在1cm
+				return 1;
+		else
+			{
+					near_pillar(true_distance, thetha+ROBOT_REAL_POS_DATA.POS_YAW,V_max);
+					return 0;
+			}
 	}
 }
 
 //特殊点跟踪
-void near_pillar(float POS_X, float POS_Y, float POS_YAW,float V_max)
+void near_pillar(float distance,float POS_YAW,float V_max)
 {
-		YawAdjust(POS_YAW);
-	 
 	  
-	  //计算误差
-	 PID_position_PID_calculation_by_error(&point_traker_ladar_x_pid, POS_X);
-   PID_position_PID_calculation_by_error(&point_traker_ladar_y_pid, POS_Y);
+	 //计算误差
+	 
+   PID_position_PID_calculation_by_error(&point_traker_ladar_y_pid,distance);
+	 PID_position_PID_calculation_by_error(&yaw_pid_ladar,POS_YAW);
 	 point_traker_ladar_y_pid.outputmax = ABS(V_max);
-	 point_traker_ladar_x_pid.outputmax = ABS(V_max);
-	ROBOT_TARGET_VELOCITY_DATA.Vx_RPM =point_traker_ladar_x_pid.output ;
-	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM = point_traker_ladar_y_pid.output ;   
-
+	
+	
+	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM =point_traker_ladar_y_pid.output ;   
+	ROBOT_TARGET_VELOCITY_DATA.W_RPM=yaw_pid_ladar.output;
+		
 }
 
 

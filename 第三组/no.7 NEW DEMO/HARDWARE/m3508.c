@@ -143,7 +143,7 @@ void chassis_m3508_send_motor_currents_can1(void)
 	// 配置控制段
 	tx_message_1.IDE = CAN_Id_Standard;
 	tx_message_1.RTR = CAN_RTR_Data;
-	tx_message_1.DLC = 0x14;//0x02代表一个电机
+	tx_message_1.DLC = 0x08;//0x02代表一个电机
 	
 	// 配置仲裁段和数据段	
 	tx_message_1.StdId = 0x200;  // 用于ID为 1 2 3  的电机
@@ -155,14 +155,31 @@ void chassis_m3508_send_motor_currents_can1(void)
 	tx_message_1.Data[5] = (uint8_t) M3508_CHASSIS_MOTOR_REAL_INFO[2].TARGET_CURRENT;
 	tx_message_1.Data[6] = (uint8_t)(M3508_CHASSIS_MOTOR_REAL_INFO[3].TARGET_CURRENT >> 8);
 	tx_message_1.Data[7] = (uint8_t) M3508_CHASSIS_MOTOR_REAL_INFO[3].TARGET_CURRENT;
-	tx_message_1.Data[8] = (uint8_t)(M3508_UP.REAL_INFO.TARGET_CURRENT >> 8);
-	tx_message_1.Data[9] = (uint8_t) M3508_UP.REAL_INFO.TARGET_CURRENT;
-	tx_message_1.Data[10] = (uint8_t)(M3508_YAW.REAL_INFO.TARGET_CURRENT >> 8);
-	tx_message_1.Data[11] = (uint8_t) M3508_YAW.REAL_INFO.TARGET_CURRENT;
-	tx_message_1.Data[12] = (uint8_t)(M3508_TRANSATE.REAL_INFO.TARGET_CURRENT >> 8);
-	tx_message_1.Data[13] = (uint8_t) M3508_TRANSATE.REAL_INFO.TARGET_CURRENT;
 
 	CAN_Transmit(CAN1, &tx_message_1);
+}
+
+void chassis_m3508_m2006_send_motor_currents_can1(void)
+{
+	CanTxMsg tx_message_2;
+	
+	// 配置控制段
+	tx_message_2.IDE = CAN_Id_Standard;
+	tx_message_2.RTR = CAN_RTR_Data;
+	tx_message_2.DLC = 0x08;
+	
+	// 配置仲裁段和数据段
+	tx_message_2.StdId = 0x1FF;  // 用于ID为 5 6 7 8 的电机(不论是3508还是2006)
+	tx_message_2.Data[0] = (uint8_t)(M3508_UP.REAL_INFO.TARGET_CURRENT >> 8);
+	tx_message_2.Data[1] = (uint8_t) M3508_UP.REAL_INFO.TARGET_CURRENT;
+  tx_message_2.Data[2] = (uint8_t)(M3508_YAW.REAL_INFO.TARGET_CURRENT >> 8);
+  tx_message_2.Data[3] = (uint8_t) M3508_YAW.REAL_INFO.TARGET_CURRENT;
+	tx_message_2.Data[4] = (uint8_t)(M3508_CHASSIS_MOTOR_REAL_INFO[5].TARGET_CURRENT >> 8);
+	tx_message_2.Data[5] = (uint8_t) M3508_CHASSIS_MOTOR_REAL_INFO[5].TARGET_CURRENT;	      //ID 7 
+  tx_message_2.Data[6] = (uint8_t)(M3508_TRANSATE.REAL_INFO.TARGET_CURRENT >> 8);
+  tx_message_2.Data[7] = (uint8_t)(M3508_TRANSATE.REAL_INFO.TARGET_CURRENT >> 8);
+	
+	CAN_Transmit(CAN1, &tx_message_2);
 }
 
 // M3508电机角度积分

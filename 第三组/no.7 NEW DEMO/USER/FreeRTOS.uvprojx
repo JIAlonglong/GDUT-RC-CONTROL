@@ -420,11 +420,6 @@
               <FilePath>..\HARDWARE\control.c</FilePath>
             </File>
             <File>
-              <FileName>m3508.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\m3508.c</FilePath>
-            </File>
-            <File>
               <FileName>move.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\move.c</FilePath>
@@ -483,6 +478,11 @@
               <FileName>pstwo.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HARDWARE\pstwo.h</FilePath>
+            </File>
+            <File>
+              <FileName>m3508.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\m3508.c</FilePath>
             </File>
             <File>
               <FileName>TMOTOR.c</FileName>
@@ -668,6 +668,11 @@
               <FileName>MotorVelocityCurve.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\TASK\MotorVelocityCurve.c</FilePath>
+            </File>
+            <File>
+              <FileName>data_update.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\TASK\data_update.c</FilePath>
             </File>
           </Files>
         </Group>

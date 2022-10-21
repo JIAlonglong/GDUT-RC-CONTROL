@@ -85,6 +85,7 @@ extern int16_t TRANSATE_MOTOR_TARGET_RPM;
 void M3508_Motor_Init(void);
 void m3508_update_m3508_info_can1(CanRxMsg *msg);
 void chassis_m3508_send_motor_currents_can1(void);
+void chassis_m3508_m2006_send_motor_currents_can1(void);
 void M3508AngleIntegral(M3508_REAL_INFO *M3508_MOTOR);
 void ad_plan_arm_motor_RPM_YAW(ARM_VELOCITY_PLANNING motion, 							float pos			)	;// 规划云台电机应有的RPM
 void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			);// 规划抬升机构应有的RPM
