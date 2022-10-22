@@ -16,7 +16,7 @@ void move_task(void *pvParameters)
 				{
 					if(AIR_L_LONG>950&&AIR_L_LONG<1250&&AIR_R_LONG>950&&AIR_R_LONG<1250)//打高档和高档
 								{
-										ROBOT_SHOOTING=SHOOT_WAITING;
+										ROBOT_SHOOTING=SHOOT_INIT;
 										Free_Control();//遥控自由控制
 								}
 					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>800&&ROCK_L_X<1200)//打中档和左边左
@@ -74,14 +74,20 @@ void move_task(void *pvParameters)
 											//Jiguang_Action_Update(0.0,0.0);
 										
 										}
+										if(ROCK_L_Y>1850)
+										{
+											ROBOT_SHOOTING=SHOOT_WAITING;
+										}
 								}
 								
-				      if(ROCK_R_Y>1850)//拉右边油杆
+//				      if(ROCK_R_Y>1850)//拉右边油杆
+								if(1)
 				      {
 						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-					    //PUSH
+					    //PUSH PUSH UPDATE ANGLE
+						PUSH(0,-2000);
 				      }
 					 
 

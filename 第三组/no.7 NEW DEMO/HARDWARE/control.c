@@ -59,44 +59,54 @@ float CURRENT_PID_M3508(float now_current,float target_current)
 }
 
 //曲线规划
-void MotorVelocityCurve(CurveObjectType *curve,PID *M3508)
+void MotorVelocityCurve(CurveObjectType *curve,PID *M3508,M3508_REAL_INFO *M3508_REAL)
 {
 	
  int flag=0;
  int time_now =0;
+//	int deta_distance=M3508_REAL->RPM*M3508_RM_To_MS;
+//	int distance =distance+deta_distance;
  int  time_acc = curve->p_add * curve->aTimes;		//加速时间
-int time_con = curve->aTimes-time_acc;//匀速时间。
+int time_con = curve->aTimes-time_acc;//匀速时间
+	int time_slow=curve->p_decrease*curve->aTimes;//减速时间
+	float TARGET_RPM=0;
     //控制不能超速。
 	if(curve->currentSpeed>curve->speedMax)
   {
     curve->currentSpeed=curve->speedMax;
   }
-	//控制不能超速
-//	 if(curve->targetSpeed<curve->speedMin)
-//  {
-//    curve->targetSpeed=curve->speedMin;
-//  }
 	if((M3508->output>curve->speedMin)&&flag!=1)
 	//加速阶段
 	{
-		while(time_now < time_acc)
-	{
-		time_now++;
-		curve->currentSpeed+=curve->stepSpeed;
-		vTaskDelay(1);
+			while(time_now < time_acc)
+		{
+				time_now++;
+				curve->currentSpeed+=curve->stepSpeed;
+				vTaskDelay(1);//1ms
+		}
 	}
-	}
-	while(time_now > time_acc)
+	while(time_now > time_acc&&time_now<time_acc+time_con)
 	{
 		flag=1;
 		
-		if(M3508->output>curve->speedMax)
+				if(M3508->output>curve->speedMax)
 		{
-		time_now++;
-		curve->currentSpeed=curve->speedMax;}
+				time_now++;
+				curve->currentSpeed=curve->speedMax;
+		}
 		if(M3508->output<curve->speedMax)
-			curve->currentSpeed=M3508->output;
+				curve->currentSpeed=M3508->output;
 		vTaskDelay(1);
+	}
+	if((M3508->output>curve->speedMin)&&flag!=1)
+	//减速阶段
+	{
+		while(time_now > time_acc+time_con)
+	{
+		time_now++;
+		curve->currentSpeed-=curve->stepSpeed;
+		vTaskDelay(1);
+	}
 	}
 if(M3508->output<curve->speedMin)
 	flag=0;
@@ -104,6 +114,9 @@ if(time_now>curve->aTimes)
 {
 time_now=0;
 }
+    M3508_REAL->TARGET_RPM=curve->currentSpeed;// 分配合适的正负号
+		PID_incremental_PID_calculation(M3508, M3508_REAL->RPM ,M3508_REAL->TARGET_RPM);
+		M3508_REAL->TARGET_CURRENT=M3508->output;
 }
 
 
@@ -201,3 +214,14 @@ void RPM_MOTOR_PLANNING(void)
 
 }
 
+void PUSH(float start,float end)
+{
+	TRANSATE_1.Pstart=start;
+	TRANSATE_1.Pend=end;
+	TRANSATE_NOW_MOTION=&TRANSATE_1;
+	if(ad_plan_arm_motor_RPM_TRANSATE1(*TRANSATE_NOW_MOTION,M3508_TRANSATE.REAL_INFO.REAL_ANGLE))
+	{
+		M3508_TRANSATE.REAL_INFO.REAL_ANGLE=0;
+	
+	}
+}

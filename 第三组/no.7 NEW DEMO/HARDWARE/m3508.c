@@ -5,7 +5,8 @@
  speed    电机轴rpm 
  RPM      电机转子rpm
  *********************/
-
+int start=0;
+int end=0;
 M3508_REAL_INFO M3508_CHASSIS_MOTOR_REAL_INFO[3] = {0};
 
 PID M3508_CHASSIS_MOTOR_PID_RPM[3];	// 3个M3508电机
@@ -24,9 +25,11 @@ M3508_CLASS M3508_TRANSATE;//传递电机初始化 CANid为7
 
 ARM_VELOCITY_PLANNING  *UP_ARM_NOW_MOTION;		 // 指向抬升当前动作
 //								  开始位置  结束位置    开始的速度(RPM 绝对值)  最大的速度	 末尾的速度   加速路程的比例 减速路程的比例
-ARM_VELOCITY_PLANNING   UP_INIT={0,        -10,          100,                200,            0,          0.3,         0.3};//实验用
-ARM_VELOCITY_PLANNING   UP_ON	 ={0};
-ARM_VELOCITY_PLANNING   UP_DOWN={0};
+ARM_VELOCITY_PLANNING   UP_INIT={0};//实验用
+ARM_VELOCITY_PLANNING   UP_ON1	 ={0,        -20,          200,                300,            0,          0.2,         0.3};
+ARM_VELOCITY_PLANNING   UP_ON2	 ={-20,        -50,          300,                2000,            0,          0.2,         0.3};
+ARM_VELOCITY_PLANNING   UP_ON3	 ={-50,       -1000,         1200,             1500,            0,          0.4,         0.2};
+ARM_VELOCITY_PLANNING   UP_DOWN3={-1000,           0,         1200,             1500,            0,          0.2,         0.3};
 	
 
 ARM_VELOCITY_PLANNING  *YAW_ARM_NOW_MOTION;		 // 指向云台当前动作
@@ -39,8 +42,22 @@ ARM_VELOCITY_PLANNING   YAW_MOVE_2={0};
 ARM_VELOCITY_PLANNING   YAW_MOVE_3={0};	
 
 TRANSATE_VELOCITY_PLANNING *TRANSATE_NOW_MOTION; //指向传递电机的当前动作
-//								  总路程    开始的速度(RPM 绝对值)  最大的速度	 末尾的速度   加速路程的比例 减速路程的比例	
+//							总路程	 开始位置  结束位置    开始的速度(RPM 绝对值)  最大的速度	 末尾的速度   加速路程的比例 减速路程的比例	
 TRANSATE_VELOCITY_PLANNING TRANSATE_INIT={0};
+TRANSATE_VELOCITY_PLANNING TRANSATE_1={2000,0 , 0	,1200		,1500		,0		,0.2		,0.3};//0 , 2000		,1200		,5000		,0		,0.2		,0.4
+/*float distance;       //距离
+  float startSpeed;    //开始调速时的初始速度
+  float currentSpeed;   //当前速度
+  float targetSpeed;    //目标速度
+  float stepSpeed;     //加速度
+  float speedMax;     //最大速度
+  float speedMin;     //最小速度
+  uint32_t aTimes;     //调速时间
+  uint32_t maxTimes;    //调速跨度
+	float  p_add;    //加速的占比
+	float  p_decrease; //减速的占比
+*/
+CurveObjectType TRANSATE={2000,0,0,500,30,600,0,1000,0,0.3,0.7};
 // M3508初始化
 void M3508_Motor_Init(void)
 {
@@ -300,11 +317,11 @@ void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			)
 	// 分配合适的正负号
 	if(motion.Pend < motion.Pstart) UP_MOTOR_TARGET_RPM = -UP_MOTOR_TARGET_RPM;
 	//pid
-//	PID_incremental_PID_calculation(&M3508_UP.MOTOR_PID, M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
-//	M3508_UP.REAL_INFO.TARGET_CURRENT = M3508_UP.MOTOR_PID.output;
+	PID_incremental_PID_calculation(&M3508_UP.MOTOR_PID, M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
+	M3508_UP.REAL_INFO.TARGET_CURRENT = M3508_UP.MOTOR_PID.output;
 	//LADRC
-	LADRC_Loop(&ADRC_M3508_UP,M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
-	M3508_UP.REAL_INFO.TARGET_CURRENT=ADRC_M3508_UP.u;
+//	LADRC_Loop(&ADRC_M3508_UP,M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
+//	M3508_UP.REAL_INFO.TARGET_CURRENT=ADRC_M3508_UP.u;
 }
 
 // 规划云台电机应有的RPM
@@ -369,13 +386,13 @@ void ad_plan_arm_motor_RPM_YAW(ARM_VELOCITY_PLANNING motion, 							float pos			
 //	PID_incremental_PID_calculation(&M3508_YAW.MOTOR_PID, M3508_YAW.REAL_INFO.RPM ,YAW_MOTOR_TARGET_RPM);
 //	M3508_YAW.REAL_INFO.TARGET_CURRENT = M3508_YAW.MOTOR_PID.output;
 	//LADRC
-	LADRC_Loop(&ADRC_M3508_YAW,M3508_YAW.REAL_INFO.RPM ,YAW_MOTOR_TARGET_RPM);
-	M3508_YAW.REAL_INFO.TARGET_CURRENT=ADRC_M3508_YAW.u;
+//	LADRC_Loop(&ADRC_M3508_YAW,M3508_YAW.REAL_INFO.RPM ,YAW_MOTOR_TARGET_RPM);
+//	M3508_YAW.REAL_INFO.TARGET_CURRENT=ADRC_M3508_YAW.u;
 }
 
 // 规划传递电机应有的RPM
 //								*ARM_NOW_MOTION 	M3508_ARM_MOTOR_REAL_INFO.REAL_ANGLE[处理过的真实角度]
-void ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							float pos			)	
+int ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							float pos			)	
 {
 	float Ssu;   //总路程
 	float Sac;   //加速路程
@@ -390,27 +407,53 @@ void ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							f
 		 (motion.Rde > 1) || (motion.Rde < 0) ||	//减速路程的比例
 		 (motion.Vmax < motion.Vstart) )			//最大的速度<开始的速度 
 	{
-		TRANSATE_MOTOR_TARGET_RPM = 0;  // 令夹爪不运动
-		return;
+		TRANSATE_MOTOR_TARGET_RPM = 0;  // 令抬升机构不运动
+		return 0;
+	}
+	// 匀速模式
+	if(motion.Pstart == motion.Pend)	//开始位置=结束位置
+	{
+		TRANSATE_MOTOR_TARGET_RPM = motion.Vstart * motion.Vmax;	//开始的速度*最大的速度
+		return 0;
 	}
 	
 	// 计算一些变量
-	Ssu = ABS(motion.Distance); 	//总路程   
+	Ssu = ABS(motion.Pend - motion.Pstart); 	//总路程   
 	Sac = Ssu * motion.Rac;		//加速路程 =	总路程 * 加速路程的比例
 	Sde = Ssu * motion.Rde;		//减速路程 =	总路程 * 减速路程的比例
 	Sco = Ssu - Sac - Sde;		//匀速路程 = 总路程 - 加速路程 - 减速路程
 	Aac = (motion.Vmax * motion.Vmax - motion.Vstart * motion.Vstart) / (2.0f * Sac);	//加速加速度 (最大的速度*最大的速度 - 开始的速度 *开始的速度 ) / (2.0f * 加速路程)
 	Ade = (motion.Vend * motion.Vend -   motion.Vmax *   motion.Vmax) / (2.0f * Sde);	
 	
-
+	// 过滤异常情况
+	if(((motion.Pend > motion.Pstart) && (pos < motion.Pstart)) ||		//[(结束位置 > 开始位置) && (处理过的真实角度pos <开始位置)]	||
+		 ((motion.Pend < motion.Pstart) && (pos > motion.Pstart)))		//	[(结束位置 < 开始位置) && (处理过的真实角度pos >开始位置)]
+	{
+		TRANSATE_MOTOR_TARGET_RPM = motion.Vstart;	//TARGET_RPM = 开始的速度
+	}
+	else if(((motion.Pend > motion.Pstart) && (pos > motion.Pend)) ||
+		      ((motion.Pend < motion.Pstart) && (pos < motion.Pend)))
+	{
+		TRANSATE_MOTOR_TARGET_RPM = motion.Vend;	//TARGET_RPM = 末尾的速度
+	}
+	else
+	{
+		S = ABS(pos - motion.Pstart);      //开始位置
 		
 		// 规划RPM
 		if     (S < Sac)       TRANSATE_MOTOR_TARGET_RPM = sqrt(2.0f * Aac * S + motion.Vstart * motion.Vstart);               // 加速阶段
 		else if(S < (Sac+Sco)) TRANSATE_MOTOR_TARGET_RPM = motion.Vmax;                                                        // 匀速阶段
 		else                   TRANSATE_MOTOR_TARGET_RPM = sqrt(motion.Vend * motion.Vend - 2.0f * Ade * ABS(Ssu - S));  // 减速阶段
-		// 分配合适的正负号
-	 TRANSATE_MOTOR_TARGET_RPM = -TRANSATE_MOTOR_TARGET_RPM;
-//pid
+	}
+	
+	// 分配合适的正负号
+	if(motion.Pend < motion.Pstart) TRANSATE_MOTOR_TARGET_RPM = -TRANSATE_MOTOR_TARGET_RPM;
+	//pid
+	PID_incremental_PID_calculation(&M3508_TRANSATE.MOTOR_PID, M3508_TRANSATE.REAL_INFO.RPM ,TRANSATE_MOTOR_TARGET_RPM);
+	M3508_TRANSATE.REAL_INFO.TARGET_CURRENT = M3508_TRANSATE.MOTOR_PID.output;
+	
+	if(ABS(S-Ssu)<0.1){return 1;}
+	return 0;
 //	//s型曲线规划的参数设置
 //	curve.speedMax=8000;
 //	curve.aTimes=1000;
@@ -420,8 +463,8 @@ void ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							f
 //	MotorVelocityCurve(&curve,&M3508_TRANSATE.MOTOR_PID);
 //	M3508_TRANSATE.REAL_INFO.TARGET_CURRENT = M3508_TRANSATE.MOTOR_PID.output;
 	//LADRC
-	LADRC_Loop(&ADRC_M3508_TRANSATE,M3508_TRANSATE.REAL_INFO.RPM ,TRANSATE_MOTOR_TARGET_RPM);
-	M3508_TRANSATE.REAL_INFO.TARGET_CURRENT=ADRC_M3508_TRANSATE.u;
+//	LADRC_Loop(&ADRC_M3508_TRANSATE,M3508_TRANSATE.REAL_INFO.RPM ,TRANSATE_MOTOR_TARGET_RPM);
+//	M3508_TRANSATE.REAL_INFO.TARGET_CURRENT=ADRC_M3508_TRANSATE.u;
 	}
 
 

@@ -1,11 +1,13 @@
 #ifndef __M3508_H
 #define __M3508_H
 #include "stm32f4xx.h"
+extern int start,end;
 // M3508返回的电机真实信息
 typedef struct M3508_REAL_INFO
 {
 	uint16_t ANGLE;   		        //采样角度						
-	int16_t  RPM;								
+	int16_t  RPM;
+  int16_t  TARGET_RPM;	
 	int16_t  CURRENT;
 	int16_t  TARGET_CURRENT;
 	
@@ -13,11 +15,14 @@ typedef struct M3508_REAL_INFO
 	float		 REAL_ANGLE;         //处理过的真实角度（必须用float）
 	u8			 FIRST_ANGLE_INTEGRAL_FLAG;
 	uint16_t LAST_ANGLE;
+	
+	
 }M3508_REAL_INFO;
 
 //用于曲线规划的结构体
 /* 定义电机速度曲线对象 */
-typedef struct CurveObject {
+typedef struct CurveObjectType {
+	float distance;       //距离
   float startSpeed;    //开始调速时的初始速度
   float currentSpeed;   //当前速度
   float targetSpeed;    //目标速度
@@ -52,7 +57,9 @@ typedef struct ARM_VELOCITY_PLANNING //速度规划
 
 typedef struct TRANSATE_VELOCITY_PLANNING //速度规划
 {
-	float Distance;      //总路程
+	float Distance;
+	float Pstart;        //开始位置
+	float Pend;          //结束位置
 	float Vstart;        //开始的速度           // 单位：RPM 绝对值
 	float Vmax;          //最大的速度
 	float Vend;          //末尾的速度
@@ -62,8 +69,10 @@ typedef struct TRANSATE_VELOCITY_PLANNING //速度规划
 
 extern struct ARM_VELOCITY_PLANNING  *UP_ARM_NOW_MOTION;		 // 指向抬升当前动作
 extern struct ARM_VELOCITY_PLANNING   UP_INIT;//抬升机构初始化
-extern struct ARM_VELOCITY_PLANNING   UP_ON;//抬升
-extern struct ARM_VELOCITY_PLANNING   UP_DOWN;//下降
+extern struct ARM_VELOCITY_PLANNING   UP_ON1;//抬升
+extern struct ARM_VELOCITY_PLANNING   UP_ON2;//抬升
+extern struct ARM_VELOCITY_PLANNING   UP_ON3;//抬升
+extern struct ARM_VELOCITY_PLANNING   UP_DOWN3;//下降
 
 extern struct ARM_VELOCITY_PLANNING  *YAW_ARM_NOW_MOTION;		 // 指向云台当前动作
 extern struct ARM_VELOCITY_PLANNING   YAW_INIT;//云台机构初始化
@@ -76,6 +85,8 @@ extern struct ARM_VELOCITY_PLANNING   YAW_MOVE_3;//云台机构固定点转3
 extern struct TRANSATE_VELOCITY_PLANNING *TRANSATE_NOW_MOTION; //传递环的电机（思路一）（规定距离）
 																															//	思路二 开始和结束的位置累加上次的位置值
 extern struct TRANSATE_VELOCITY_PLANNING TRANSATE_INIT;
+extern struct TRANSATE_VELOCITY_PLANNING TRANSATE_1;
+extern struct CurveObjectType TRANSATE;
 
 extern int16_t UP_MOTOR_TARGET_RPM ;    // 抬升电机目标速度
 extern int16_t YAW_MOTOR_TARGET_RPM ;    // 转向电机目标速度
@@ -89,7 +100,7 @@ void chassis_m3508_m2006_send_motor_currents_can1(void);
 void M3508AngleIntegral(M3508_REAL_INFO *M3508_MOTOR);
 void ad_plan_arm_motor_RPM_YAW(ARM_VELOCITY_PLANNING motion, 							float pos			)	;// 规划云台电机应有的RPM
 void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			);// 规划抬升机构应有的RPM
-void ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							float pos			)	;
+int ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							float pos			)	;
 
 
 extern struct M3508_REAL_INFO M3508_CHASSIS_MOTOR_REAL_INFO[3];//底盘
