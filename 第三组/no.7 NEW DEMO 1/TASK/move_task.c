@@ -77,7 +77,7 @@ void move_task(void *pvParameters)
 									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-									PUSH(0,-2000,2000,1500,0,0.4,0.5);
+									PUSH(0,-2000,2000,1500,0,0.4,0.5);//·¶Î§£º1000-10000
 										}
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
@@ -98,7 +98,7 @@ void move_task(void *pvParameters)
 									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-									PUSH(0,-2000,2000,1500,0,0.4,0.5);
+									PUSH(0,-2000,2000,1500,0,0.4,0.5);//·¶Î§£º1000-10000
 										}
 						  
 									//LOCK LockupPoint
