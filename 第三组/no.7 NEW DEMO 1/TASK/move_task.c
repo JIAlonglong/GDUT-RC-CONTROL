@@ -10,7 +10,15 @@ void move_task(void *pvParameters)
 						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-					 
+					 // µ—È							
+//			      if(1)//¿≠”“±ﬂ”Õ∏À
+//				      {
+//						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
+//						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
+//						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
+//					    //PUSH PUSH UPDATE ANGLE
+//						PUSH(0,-4000,10000,9000,0,0.4,0.5);//void PUSH(float start,float end,float speedmax,float speedstart,float speedend,float ac,float de)
+//				      }
 				}
 		       else     
 				{
@@ -42,14 +50,14 @@ void move_task(void *pvParameters)
 			        if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>800&&AIR_R_LONG<1200)//¥ÚµÕµµ∫Õ∏ﬂµµ
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_OUR;//…‰Œ“∑Ω÷˘◊”
-						  if(ROCK_R_Y>1850)//¿≠”“±ﬂ”Õ∏À
-				      {
-						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
-						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
-						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-					    //PUSH PUSH UPDATE ANGLE
-						PUSH(0,-2000,2000,1500,0,0.4,0.5);
-				      }
+										if(ROCK_R_Y>1850)//¿≠”“±ﬂ”Õ∏À
+									{
+											ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
+											ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
+											ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
+													//PUSH PUSH UPDATE ANGLE
+											PUSH(0,-2000,2000,1500,0,0.4,0.5);//∑∂Œß£∫1000-10000
+									}
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
@@ -63,14 +71,14 @@ void move_task(void *pvParameters)
 					 if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1460&&AIR_R_LONG<1540)//¥ÚµÕµµ∫Õ÷–µµ
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_HIGH;//…‰÷–º‰÷˘◊”
-						  if(ROCK_R_Y>1850)//¿≠”“±ﬂ”Õ∏À
-				      {
-						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
-						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
-						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-					    //PUSH PUSH UPDATE ANGLE
-						PUSH(0,-2000,2000,1500,0,0.4,0.5);
-				      }
+										if(ROCK_R_Y>1850)//¿≠”“±ﬂ”Õ∏À
+										{
+									ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
+									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
+									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
+										//PUSH PUSH UPDATE ANGLE
+									PUSH(0,-2000,2000,1500,0,0.4,0.5);
+										}
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
@@ -84,14 +92,14 @@ void move_task(void *pvParameters)
 					  if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1850&&AIR_R_LONG<2100)//¥ÚµÕµµ∫ÕµÕµµ
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_TH;//…‰∂‘∑Ω÷˘◊”
-						  if(ROCK_R_Y>1850)//¿≠”“±ﬂ”Õ∏À
-				      {
-						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
-						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
-						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-					    //PUSH PUSH UPDATE ANGLE
-						PUSH(0,-2000,2000,1500,0,0.4,0.5);
-				      }
+										if(ROCK_R_Y>1850)//¿≠”“±ﬂ”Õ∏À
+										{
+									ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
+									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
+									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
+										//PUSH PUSH UPDATE ANGLE
+									PUSH(0,-2000,2000,1500,0,0.4,0.5);
+										}
 						  
 									//LOCK LockupPoint
 										if(LaserLockPoint(ros_vx , ros_vy ,100,200))//µ•Œªcm
@@ -104,15 +112,6 @@ void move_task(void *pvParameters)
 											ROBOT_SHOOTING=SHOOT_WAITING;
 										}
 								}
-								
-//			      if(ROCK_R_Y>1850)//¿≠”“±ﬂ”Õ∏À
-//				      {
-//						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
-//						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
-//						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-//					    //PUSH PUSH UPDATE ANGLE
-//						PUSH(0,-2000,2000,1500,0,0.4,0.5);
-//				      }
 					 
 
 			     }	
