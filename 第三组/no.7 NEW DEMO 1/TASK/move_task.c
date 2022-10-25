@@ -24,7 +24,7 @@ void move_task(void *pvParameters)
 				{
 					if(AIR_L_LONG>950&&AIR_L_LONG<1250&&AIR_R_LONG>950&&AIR_R_LONG<1250)//´ò¸ßµµºÍ¸ßµµ
 								{
-										ROBOT_SHOOTING=SHOOT_INIT;
+										ROBOT_SHOOTING=SHOOT_WAITING;
 										Free_Control();//Ò£¿Ø×ÔÓÉ¿ØÖÆ
 								}
 					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>800&&ROCK_L_X<1200)//´òÖÐµµºÍ×ó±ß×ó
@@ -56,7 +56,7 @@ void move_task(void *pvParameters)
 											ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 													//PUSH PUSH UPDATE ANGLE
-											PUSH(0,-2000,2000,1500,0,0.4,0.5);//·¶Î§£º1000-10000
+											PUSH(0,-2000,5000,4000,0,0.4,0.5);//·¶Î§£º1000-10000
 									}
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
@@ -77,7 +77,7 @@ void move_task(void *pvParameters)
 									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-									PUSH(0,-2000,2000,1500,0,0.4,0.5);//·¶Î§£º1000-10000
+									PUSH(0,-2000,5000,4000,0,0.4,0.5);//·¶Î§£º1000-10000
 										}
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
@@ -98,7 +98,7 @@ void move_task(void *pvParameters)
 									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-									PUSH(0,-2000,2000,1500,0,0.4,0.5);//·¶Î§£º1000-10000
+									PUSH(0,-2000,5000,4000,0,0.4,0.5);//·¶Î§£º1000-10000
 										}
 						  
 									//LOCK LockupPoint

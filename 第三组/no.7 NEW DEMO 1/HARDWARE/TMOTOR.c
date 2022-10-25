@@ -59,6 +59,7 @@ void TIM13_PWM_Init(u32 arr,u32 psc)//初始化定时器13的两个通道
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF, ENABLE); 	//使能PORTF时钟	
 	
 	GPIO_PinAFConfig(GPIOF,GPIO_PinSource8,GPIO_AF_TIM13); //GPIOF8复用为定时器13
+//	GPIO_PinAFConfig(GPIOF,GPIO_PinSource9,GPIO_AF_TIM13); //GPIOF8复用为定时器13
 	
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;           //GPIOF8
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;        //复用功能
@@ -79,9 +80,10 @@ void TIM13_PWM_Init(u32 arr,u32 psc)//初始化定时器13的两个通道
  	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable; //比较输出使能
 	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_Low; //输出极性:TIM输出比较极性低
 	TIM_OC1Init(TIM13, &TIM_OCInitStructure);  //根据T指定的参数初始化外设TIM1 4OC1
+//	TIM_OC2Init(TIM13, &TIM_OCInitStructure);  
 	
 	TIM_OC1PreloadConfig(TIM13, TIM_OCPreload_Enable);  //使能TIM13在CCR1上的预装载寄存器
-	
+//	TIM_OC2PreloadConfig(TIM13, TIM_OCPreload_Enable);
 	
   TIM_ARRPreloadConfig(TIM13,ENABLE);//ARPE使能 
 	
@@ -177,7 +179,7 @@ void TIM9_PWM_Init(u32 arr,u32 psc)//初始化定时器14的两个通道
 }  
 void U8_contorl_1(u32 Compare1)
 {
-	TIM_SetCompare1(TIM14, Compare1);
+	TIM_SetCompare1(TIM14,Compare1);
 }
 void U8_contorl_2(u32 Compare1)
 {
@@ -189,7 +191,7 @@ void U3_contorl_1(u32 Compare1)
 }
 void U3_contorl_2(u32 Compare1)
 {
-	TIM_SetCompare1(TIM9,Compare1);
+	TIM_SetCompare1(TIM14,Compare1);
 }
 
 void TMOTOR_init()
@@ -204,13 +206,16 @@ void TMOTOR_init()
 		TIM_SetCompare1(TIM9,2000);  //脉宽3.2ms 设置高油门
 		TIM_SetCompare1(TIM10,2000);
 		delay_ms(1000);    //延时2秒
-    delay_ms(1000);    
+    delay_ms(1000); 
+ 
+	
 	 TIM_SetCompare1(TIM13,1000); //脉宽0.9ms 设置最低油门
 	 TIM_SetCompare1(TIM14,1000); 
 	 TIM_SetCompare1(TIM9,1000); //脉宽0.9ms 设置最低油门
 	 TIM_SetCompare1(TIM10,1000); 
 	 delay_ms(1000);   
-	 delay_ms(1000);    
+	 delay_ms(1000);
+
 
 
 }
