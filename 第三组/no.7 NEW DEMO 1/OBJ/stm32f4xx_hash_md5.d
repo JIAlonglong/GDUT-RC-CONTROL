@@ -2,7 +2,7 @@
 ..\obj\stm32f4xx_hash_md5.o: ..\FWLIB\inc\stm32f4xx_hash.h
 ..\obj\stm32f4xx_hash_md5.o: ..\USER\stm32f4xx.h
 ..\obj\stm32f4xx_hash_md5.o: ..\CORE\core_cm4.h
-..\obj\stm32f4xx_hash_md5.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\stm32f4xx_hash_md5.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\stm32f4xx_hash_md5.o: ..\CORE\core_cmInstr.h
 ..\obj\stm32f4xx_hash_md5.o: ..\CORE\core_cmFunc.h
 ..\obj\stm32f4xx_hash_md5.o: ..\CORE\core_cm4_simd.h

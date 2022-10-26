@@ -118,7 +118,7 @@ void move_task(void *pvParameters)
 		}
 		if(AIR_R_SHORT>1500&&mode_flag==0)//进入自动模式
 		{
-				MOVE_STATE=MOVE_STOP;
+				MOVE_STATE=MOVE_1_CAST_POINT;
 						if(MOVE_STATE==MOVE_STOP)
 						{
 							//激光矫正
