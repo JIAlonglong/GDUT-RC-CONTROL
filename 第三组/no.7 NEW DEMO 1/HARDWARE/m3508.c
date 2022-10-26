@@ -255,7 +255,7 @@ void M3508AngleIntegral(M3508_REAL_INFO *M3508_MOTOR)
 	// 存储角度值
 	M3508_MOTOR->LAST_ANGLE = M3508_MOTOR->ANGLE;
 }
-
+int up_finished;
 // 规划抬升机构应有的RPM
 //								*ARM_NOW_MOTION 	M3508_ARM_MOTOR_REAL_INFO.REAL_ANGLE[处理过的真实角度]
 void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			)	
@@ -267,7 +267,7 @@ void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			)
 	float Aac;   //加速加速度
 	float Ade;   //减速加速度
 	float S;     //当前路程
-	
+	up_finished=0;
 	// 如果所配数据有误，则不执行速度规划		
 	if((motion.Rac > 1) || (motion.Rac < 0) ||		//加速路程的比例
 		 (motion.Rde > 1) || (motion.Rde < 0) ||	//减速路程的比例
@@ -317,6 +317,8 @@ void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			)
 	//pid
 	PID_incremental_PID_calculation(&M3508_UP.MOTOR_PID, M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
 	M3508_UP.REAL_INFO.TARGET_CURRENT = M3508_UP.MOTOR_PID.output;
+	
+	if(ABS(S-Ssu)<0.1){up_finished=1;}
 	//LADRC
 //	LADRC_Loop(&ADRC_M3508_UP,M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
 //	M3508_UP.REAL_INFO.TARGET_CURRENT=ADRC_M3508_UP.u;

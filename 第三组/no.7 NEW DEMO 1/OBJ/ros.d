@@ -3,7 +3,7 @@
 ..\obj\ros.o: ..\SYSTEM\sys\sys.h
 ..\obj\ros.o: ..\USER\stm32f4xx.h
 ..\obj\ros.o: ..\CORE\core_cm4.h
-..\obj\ros.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\ros.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\ros.o: ..\CORE\core_cmInstr.h
 ..\obj\ros.o: ..\CORE\core_cmFunc.h
 ..\obj\ros.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\ros.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\ros.o: ..\SYSTEM\delay\delay.h
 ..\obj\ros.o: ..\SYSTEM\usart\usart.h
-..\obj\ros.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\ros.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\ros.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\ros.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\ros.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\ros.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\ros.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\ros.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\ros.o: ..\HARDWARE\move.h
 ..\obj\ros.o: ..\HARDWARE\path.h
 ..\obj\ros.o: ..\FSM\FSM.h
-..\obj\ros.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\ros.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\ros.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-..\obj\ros.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\ros.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\ros.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ros.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\ros.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\ros.o: ..\HARDWARE\LADRC.h

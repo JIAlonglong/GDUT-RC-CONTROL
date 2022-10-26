@@ -3,7 +3,7 @@
 ..\obj\laser.o: ..\SYSTEM\sys\sys.h
 ..\obj\laser.o: ..\USER\stm32f4xx.h
 ..\obj\laser.o: ..\CORE\core_cm4.h
-..\obj\laser.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\laser.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\laser.o: ..\CORE\core_cmInstr.h
 ..\obj\laser.o: ..\CORE\core_cmFunc.h
 ..\obj\laser.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\laser.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\laser.o: ..\SYSTEM\delay\delay.h
 ..\obj\laser.o: ..\SYSTEM\usart\usart.h
-..\obj\laser.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\laser.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\laser.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\laser.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\laser.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\laser.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\laser.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\laser.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\laser.o: ..\HARDWARE\move.h
 ..\obj\laser.o: ..\HARDWARE\path.h
 ..\obj\laser.o: ..\FSM\FSM.h
-..\obj\laser.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\laser.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\laser.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-..\obj\laser.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\laser.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\laser.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\laser.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\laser.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\laser.o: ..\HARDWARE\LADRC.h
