@@ -318,7 +318,7 @@ void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			)
 	PID_incremental_PID_calculation(&M3508_UP.MOTOR_PID, M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
 	M3508_UP.REAL_INFO.TARGET_CURRENT = M3508_UP.MOTOR_PID.output;
 	
-	if(ABS(S-Ssu)<0.1){up_finished=1;}
+	if(ABS(S-Ssu)<0.0001){up_finished=1;}
 	//LADRC
 //	LADRC_Loop(&ADRC_M3508_UP,M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
 //	M3508_UP.REAL_INFO.TARGET_CURRENT=ADRC_M3508_UP.u;
@@ -454,7 +454,10 @@ void ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							f
 	PID_incremental_PID_calculation(&M3508_TRANSATE.MOTOR_PID, M3508_TRANSATE.REAL_INFO.RPM ,TRANSATE_MOTOR_TARGET_RPM);
 	M3508_TRANSATE.REAL_INFO.TARGET_CURRENT = M3508_TRANSATE.MOTOR_PID.output;
 	
-	if(ABS(S-Ssu)<0.1){transate_finished=1;}
+	if(ABS(S-Ssu)<0.0001){transate_finished=1;}
+	
+	//如果链条堵转(测试)
+	else if(ABS(S-Ssu)>5&&TRANSATE_MOTOR_TARGET_RPM<5){PUSH(Ssu,motion.Pend,motion.Vmax,motion.Vstart,motion.Vend,motion.Rac,motion.Rde);}//void PUSH(float start,float end,float speedmax,float speedstart,float speedend,float ac,float de)
 //	//s型曲线规划的参数设置
 //	curve.speedMax=8000;
 //	curve.aTimes=1000;
