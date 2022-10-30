@@ -27,7 +27,7 @@ void MoveInit(void)
   PID_parameter_init(&point_X_pid, 0.025, 0.001, 0.33, 0.3, 0.05, -1);
 	PID_parameter_init(&point_Y_pid, 0.025, 0.001, 0.33, 0.3, 0.05, -1);
 	//yawadjust
-	PID_parameter_init(&yaw_pid, 1.5,0.002, 1.0, 200, 0, 1);
+	PID_parameter_init(&yaw_pid, 50,0, 0.1, 1000, 0, 1);
 	
 	//¼¤¹â
 	PID_parameter_init(&laser_X_pid, 3,0, 0.5, 100, 0, 10);
@@ -178,11 +178,11 @@ int LaserLockPoint(int distance_robot , int thetha ,int distance_object,float V_
 //		float POS_X=ROBOT_REAL_POS_DATA.POS_X-true_distance*sin(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
 //		float POS_Y=ROBOT_REAL_POS_DATA.POS_Y+true_distance*cos(thetha+ROBOT_REAL_POS_DATA.POS_YAW);
 //		near_pillar(POS_X, POS_Y, thetha+ROBOT_REAL_POS_DATA.POS_YAW,V_max);
-		if(ABS(distance_robot1-distance_object1)<10||distance_robot1==0)//Îó²îÔÚ1cm
+		if(ABS(distance_robot1-distance_object1)<10&&ABS(thetha)<0.5)//Îó²îÔÚ1cm
 				return 1;
 		else
 			{
-					near_pillar(true_distance, thetha+ROBOT_REAL_POS_DATA.POS_YAW,V_max);
+					near_pillar(true_distance, thetha,V_max);
 					return 0;
 			}
 	}
