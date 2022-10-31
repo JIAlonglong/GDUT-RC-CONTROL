@@ -61,7 +61,7 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										if(LaserLockPoint(ros_vx , ros_vy ,100,250))//单位cm
+										if(LaserLockPoint(ros_vx , ros_vy ,100,500))//单位cm
 										{
 											//Jiguang_Action_Update(0.0,0.0);
 										
@@ -82,7 +82,7 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										if(LaserLockPoint(ros_vx , ros_vy ,100,250))//单位cm
+										if(LaserLockPoint(ros_vx , ros_vy ,100,500))//单位cm
 										{
 											//Jiguang_Action_Update(0.0,0.0);
 										
@@ -104,7 +104,7 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 											if(MOVE_STATE==MOVE_STOP)
 									{
-										if(LaserLockPoint(ros_vx , ros_vy ,100,250))//单位cm
+										if(LaserLockPoint(ros_vx , ros_vy ,100,500))//单位cm
 										{
 											//Jiguang_Action_Update(0.0,0.0);
 										

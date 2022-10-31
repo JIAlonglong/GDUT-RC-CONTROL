@@ -29,7 +29,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_1_SHOOT:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-4788, 165, 0,500))
+			if(moving_point_track(move_time_counter,-4788, 165, 0,800))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -37,7 +37,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_2_SHOOT:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-3059, 165, 0,500))
+			if(moving_point_track(move_time_counter,-3059, 165, 0,800))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -45,7 +45,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_3_SHOOT:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-1317, 165, 0,500))
+			if(moving_point_track(move_time_counter,-1317, 165, 0,800))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -53,7 +53,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_1_RESTART:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-6028, 165, 0,500))//取环点
+			if(moving_point_track(move_time_counter,-6028, 165, 0,800))//取环点
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
