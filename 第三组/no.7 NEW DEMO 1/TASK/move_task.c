@@ -27,7 +27,7 @@ void move_task(void *pvParameters)
 										ROBOT_SHOOTING=SHOOT_WAITING;
 										Free_Control();//遥控自由控制
 								}
-					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>800&&ROCK_L_X<1200)//打中档和左边左
+					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>950&&ROCK_L_X<1100)//打中档和左边左
 			          {
 										ROBOT_SHOOTING=SHOOT_INIT;
 										MOVE_STATE=MOVE_1_RESTART;//取环点
@@ -42,7 +42,7 @@ void move_task(void *pvParameters)
 										ROBOT_SHOOTING=SHOOT_INIT;
 										MOVE_STATE=MOVE_2_SHOOT;
 			          }
-					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>850&&ROCK_L_Y<1250)//打中档和左边下
+					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>950&&ROCK_L_Y<1100)//打中档和左边下
 			          {
 										ROBOT_SHOOTING=SHOOT_INIT;
 										MOVE_STATE=MOVE_3_SHOOT;
