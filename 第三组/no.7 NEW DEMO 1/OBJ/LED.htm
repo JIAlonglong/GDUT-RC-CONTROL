@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\LED.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\LED.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Mon Oct 31 11:57:54 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Mon Oct 31 22:44:38 2022
 <BR><P>
 <H3>Maximum Stack Usage =        416 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1197,8 +1197,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_m3508_m2006_send_motor_currents_can1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ad_plan_arm_motor_RPM_TRANSATE1
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_task
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_task
 </UL>
 
 <P><STRONG><a name="[a9]"></a>PathPlan</STRONG> (Thumb, 506 bytes, Stack size 40 bytes, move.o(i.PathPlan))
@@ -1250,7 +1249,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[c6]"></a>RPM_MOTOR_PLANNING</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, control.o(i.RPM_MOTOR_PLANNING))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = RPM_MOTOR_PLANNING &rArr; ad_plan_arm_motor_RPM_TRANSATE1 &rArr; __hardfp_sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = RPM_MOTOR_PLANNING &rArr; ad_plan_arm_motor_RPM_UP &rArr; __hardfp_sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_m3508_m2006_send_motor_currents_can1
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ad_plan_arm_motor_RPM_YAW
@@ -1260,7 +1259,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor_Control
 </UL>
 
-<P><STRONG><a name="[65]"></a>Robot_state_task</STRONG> (Thumb, 106 bytes, Stack size 8 bytes, robot_state_task.o(i.Robot_state_task))
+<P><STRONG><a name="[65]"></a>Robot_state_task</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, robot_state_task.o(i.Robot_state_task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = Robot_state_task &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -1719,11 +1718,10 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[d7]"></a>ad_plan_arm_motor_RPM_TRANSATE1</STRONG> (Thumb, 600 bytes, Stack size 80 bytes, m3508.o(i.ad_plan_arm_motor_RPM_TRANSATE1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = ad_plan_arm_motor_RPM_TRANSATE1 &rArr; __hardfp_sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
+<P><STRONG><a name="[d7]"></a>ad_plan_arm_motor_RPM_TRANSATE1</STRONG> (Thumb, 522 bytes, Stack size 56 bytes, m3508.o(i.ad_plan_arm_motor_RPM_TRANSATE1))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ad_plan_arm_motor_RPM_TRANSATE1 &rArr; __hardfp_sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_incremental_PID_calculation
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PUSH
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sqrt
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
