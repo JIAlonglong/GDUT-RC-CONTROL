@@ -27,8 +27,8 @@ ARM_VELOCITY_PLANNING  *UP_ARM_NOW_MOTION;		 // 指向抬升当前动作
 //								  开始位置  结束位置    开始的速度(RPM 绝对值)  最大的速度	 末尾的速度   加速路程的比例 减速路程的比例
 ARM_VELOCITY_PLANNING   UP_INIT={0};//实验用
 ARM_VELOCITY_PLANNING   UP_ON1	 ={0,        -2280,          2500,                3500,            0,          0.4,         0.3};
-ARM_VELOCITY_PLANNING   UP_ON2	 ={-2280,        -9000,          2500,                3500,            0,          0.4,         0.3};
-ARM_VELOCITY_PLANNING   UP_ON3	 ={-9000,       -10000,         2500,             3500,            0,          0.4,         0.2};
+ARM_VELOCITY_PLANNING   UP_ON2	 ={-2280,        -10000,          2500,                3500,            0,          0.4,         0.3};
+ARM_VELOCITY_PLANNING   UP_ON3	 ={-10000,       -11000,         2500,             3500,            0,          0.4,         0.2};
 ARM_VELOCITY_PLANNING   UP_DOWN3={-10000,           0,         2500,             3500,            0,          0.2,         0.3};
 	
 

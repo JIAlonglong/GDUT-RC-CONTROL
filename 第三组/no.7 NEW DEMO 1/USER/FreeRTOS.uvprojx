@@ -660,6 +660,11 @@
               <FilePath>..\TASK\Robot_state_task.c</FilePath>
             </File>
             <File>
+              <FileName>data_update.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\TASK\data_update.c</FilePath>
+            </File>
+            <File>
               <FileName>move_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\TASK\move_task.c</FilePath>
@@ -668,11 +673,6 @@
               <FileName>MotorVelocityCurve.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\TASK\MotorVelocityCurve.c</FilePath>
-            </File>
-            <File>
-              <FileName>data_update.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\TASK\data_update.c</FilePath>
             </File>
           </Files>
         </Group>

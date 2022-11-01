@@ -24,11 +24,21 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 			case ROBOT_SHOOT_OUR:
 			
 				UP_ARM_NOW_MOTION=&UP_ON1;
+					float time_O=0;
 //        if(up_finished==1)
 //				{
-					U8_contorl_2(1350);
 					AK80_Speed_Control(AK80_ID1,0);
 					AK80_Speed_Control(AK80_ID2,0);
+					time_O++;
+					if(time_O>5000&&time_O<7000)
+					{
+						time_O=0;
+						U8_contorl_2(1450);
+					}
+					else 
+					{
+					U8_contorl_2(1350);
+					}
 //        }
 //        else
 //        {
@@ -44,11 +54,22 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 			case ROBOT_SHOOT_HIGH:
 			
 				UP_ARM_NOW_MOTION=&UP_ON2;
+					float time_H=0;
 //        if(up_finished==1)
 //				{
-					U8_contorl_2(1950);
+					//U8_contorl_2(1950);
 					AK80_Speed_Control(AK80_ID1,0);
 					AK80_Speed_Control(AK80_ID2,0);
+					time_H++;
+					if(time_H>5000&&time_H<7000)
+					{
+						time_O=0;
+						U8_contorl_2(2000);
+					}
+					else 
+					{
+					U8_contorl_2(1950);
+					}
 //        }
 //				else
 //        {
@@ -63,11 +84,23 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 			case ROBOT_SHOOT_TH:
 			
 				UP_ARM_NOW_MOTION=&UP_ON3;
+					float time_T=0;
 //        if(up_finished==1)
 //				{
-					U8_contorl_2(1500);
+					//U8_contorl_2(1500);
 					AK80_Speed_Control(AK80_ID1,0);
 					AK80_Speed_Control(AK80_ID2,0);
+					time_T++;
+					if(time_T>5000&&time_T<7000)
+					{
+						time_T=0;
+						U8_contorl_2(2000);
+					}
+					else 
+					{
+					U8_contorl_2(1950);
+					}
+					
 //        }
 //        else
 //        {

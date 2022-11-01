@@ -50,7 +50,7 @@ void move_task(void *pvParameters)
 			        if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>800&&AIR_R_LONG<1200)//打低档和高档
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_OUR;//射我方柱子
-										if(ROCK_R_Y>1650)//拉右边油杆
+										if(ROCK_L_Y>1600)//拉左边油杆
 									{
 											ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
@@ -61,7 +61,7 @@ void move_task(void *pvParameters)
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										if(LaserLockPoint(ros_vx , ros_vy ,100,500))//单位cm
+										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm
 										{
 											//Jiguang_Action_Update(0.0,0.0);
 										
@@ -71,18 +71,18 @@ void move_task(void *pvParameters)
 					 if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1460&&AIR_R_LONG<1540)//打低档和中档
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_HIGH;//射中间柱子
-										if(ROCK_R_Y>1650)//拉右边油杆
+										if(ROCK_L_Y>1600)//拉左边油杆
 										{
 									ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-									PUSH(0,-1650,7000,6000,0,0.4,0.5);//范围：1000-10000
+									PUSH(0,-1650,9000,8000,0,0.4,0.5);//范围：1000-10000
 										}
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP)
 									{
-										if(LaserLockPoint(ros_vx , ros_vy ,100,500))//单位cm
+										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm
 										{
 											//Jiguang_Action_Update(0.0,0.0);
 										
@@ -92,19 +92,19 @@ void move_task(void *pvParameters)
 					  if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1850&&AIR_R_LONG<2100)//打低档和低档
 			          {
 			            ROBOT_SHOOTING=ROBOT_SHOOT_TH;//射对方柱子
-										if(ROCK_R_Y>1650)//拉右边油杆
+										if(ROCK_L_Y>1600)//拉右边油杆
 										{
 									ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 									ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-									PUSH(0,-1650,5000,4000,0,0.4,0.5);//范围：1000-10000
+									PUSH(0,-1650,9000,8000,0,0.4,0.5);//范围：1000-10000
 										}
 						  
 									//LOCK LockupPoint
 											if(MOVE_STATE==MOVE_STOP)
 									{
-										if(LaserLockPoint(ros_vx , ros_vy ,100,500))//单位cm
+										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm
 										{
 											//Jiguang_Action_Update(0.0,0.0);
 										
