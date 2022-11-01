@@ -454,7 +454,7 @@ void ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							f
 	PID_incremental_PID_calculation(&M3508_TRANSATE.MOTOR_PID, M3508_TRANSATE.REAL_INFO.RPM ,TRANSATE_MOTOR_TARGET_RPM);
 	M3508_TRANSATE.REAL_INFO.TARGET_CURRENT = M3508_TRANSATE.MOTOR_PID.output;
 	
-	if(ABS(S-Ssu)<0.1){transate_finished=1;}
+	if(ABS(S-Ssu)<2){transate_finished=1;}
 	
 	//如果链条堵转(测试)
 //	else if(ABS(S-Ssu)>5&&TRANSATE_MOTOR_TARGET_RPM<5){PUSH(Ssu,motion.Pend,motion.Vmax,motion.Vstart,motion.Vend,motion.Rac,motion.Rde);}//void PUSH(float start,float end,float speedmax,float speedstart,float speedend,float ac,float de)
