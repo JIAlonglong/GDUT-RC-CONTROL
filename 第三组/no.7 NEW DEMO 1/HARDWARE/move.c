@@ -205,9 +205,9 @@ void near_pillar(float distance,float POS_YAW,float V_max)
 }
 
 
-float kp_x = 9;
+float kp_x = 7;
 float kd_x = 0;	//0.00011
-float kp_y = 8;
+float kp_y = 6;
 float kd_y = 0;	//0.00011
 float kp_yaw = 1;
 float kd_yaw = 0;
