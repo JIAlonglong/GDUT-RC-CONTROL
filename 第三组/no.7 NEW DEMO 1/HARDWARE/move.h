@@ -37,7 +37,16 @@ typedef enum
 	MOVE_3_SHOOT,
 	
 	// 启动区
-	MOVE_1_RESTART
+	MOVE_1_RESTART,
+	
+	// 射环1靠近
+	MOVE_1_SHOOT_CLOSE,
+	
+	// 射环2靠近
+	MOVE_2_SHOOT_CLOSE,
+	
+	// 射环3靠近
+	MOVE_3_SHOOT_CLOSE
 	
 }MOVE_STATE_ITEMS;
 

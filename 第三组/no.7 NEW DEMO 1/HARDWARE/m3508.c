@@ -27,9 +27,9 @@ ARM_VELOCITY_PLANNING  *UP_ARM_NOW_MOTION;		 // 指向抬升当前动作
 //								  开始位置  结束位置    开始的速度(RPM 绝对值)  最大的速度	 末尾的速度   加速路程的比例 减速路程的比例
 ARM_VELOCITY_PLANNING   UP_INIT={0};//实验用
 ARM_VELOCITY_PLANNING   UP_ON1	 ={0,        -2280,          2500,                3500,            0,          0.4,         0.3};
-ARM_VELOCITY_PLANNING   UP_ON2	 ={-2280,        -10000,          2500,                3500,            0,          0.4,         0.3};
+ARM_VELOCITY_PLANNING   UP_ON2	 ={-2280,        -10000,          3500,                4500,            0,          0.4,         0.3};
 ARM_VELOCITY_PLANNING   UP_ON3	 ={-10000,       -11000,         2500,             3500,            0,          0.4,         0.2};
-ARM_VELOCITY_PLANNING   UP_DOWN3={-10000,           0,         2500,             3500,            0,          0.2,         0.3};
+ARM_VELOCITY_PLANNING   UP_DOWN3={-11000,           0,         3500,             4500,            0,          0.2,         0.3};
 	
 
 ARM_VELOCITY_PLANNING  *YAW_ARM_NOW_MOTION;		 // 指向云台当前动作
@@ -454,7 +454,7 @@ void ad_plan_arm_motor_RPM_TRANSATE1(TRANSATE_VELOCITY_PLANNING motion, 							f
 	PID_incremental_PID_calculation(&M3508_TRANSATE.MOTOR_PID, M3508_TRANSATE.REAL_INFO.RPM ,TRANSATE_MOTOR_TARGET_RPM);
 	M3508_TRANSATE.REAL_INFO.TARGET_CURRENT = M3508_TRANSATE.MOTOR_PID.output;
 	
-	if(ABS(S-Ssu)<2){transate_finished=1;}
+	if(ABS(S-Ssu)<5){transate_finished=1;}
 	
 	//如果链条堵转(测试)
 //	else if(ABS(S-Ssu)>5&&TRANSATE_MOTOR_TARGET_RPM<5){PUSH(Ssu,motion.Pend,motion.Vmax,motion.Vstart,motion.Vend,motion.Rac,motion.Rde);}//void PUSH(float start,float end,float speedmax,float speedstart,float speedend,float ac,float de)

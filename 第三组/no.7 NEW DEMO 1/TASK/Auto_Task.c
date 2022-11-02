@@ -59,6 +59,30 @@ void Auto_Task(void *pvParameters)
 					MOVE_STATE = MOVE_STOP;
 				}
 			 break;
+			case MOVE_1_SHOOT_CLOSE:
+				move_time_counter += 0.01f;
+			if(moving_point_track(move_time_counter,-4788, 165, 0,500))
+				{
+					move_time_counter = 0;
+					MOVE_STATE = MOVE_STOP;
+				}
+			 break;
+			case MOVE_2_SHOOT_CLOSE:
+				move_time_counter += 0.01f;
+			if(moving_point_track(move_time_counter,-3059, 165, 0,500))
+				{
+					move_time_counter = 0;
+					MOVE_STATE = MOVE_STOP;
+				}
+			 break;
+			case MOVE_3_SHOOT_CLOSE:
+				move_time_counter += 0.01f;
+			if(moving_point_track(move_time_counter,-1317, 165, 0,500))
+				{
+					move_time_counter = 0;
+					MOVE_STATE = MOVE_STOP;
+				}
+			 break;
 			
 			default:
 				break;

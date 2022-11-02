@@ -227,6 +227,7 @@ void PUSH(float start,float end,float speedmax,float speedstart,float speedend,f
 	if(transate_finished)
 	{
 		M3508_TRANSATE.REAL_INFO.REAL_ANGLE=0;
+		TRANSATE_NOW_MOTION=&TRANSATE_INIT;
 	
 	}
 	chassis_m3508_m2006_send_motor_currents_can1();
