@@ -44,6 +44,7 @@ typedef struct M3508_CLASS
 	PID MOTOR_PID;	
 	int TARGET_RPM;								
 	int SET_CURRENT;
+	int TARGET_ANGLE;
 }M3508_CLASS;
 
 typedef struct ARM_VELOCITY_PLANNING //速度规划
@@ -114,6 +115,7 @@ extern struct PID M3508_CHASSIS_MOTOR_PID_RPM[3];    			 // 驱动M3508电机
 extern struct PID M3508_UP_MOTOR_PID_RPM[1];//抬升机构
 extern struct PID M3508_YAW_MOTOR_PID_RPM[1];//云台机构
 extern struct PID M3508_TRANSATE_MOTOR_PID_RPM[1];//传输机构
+extern struct PID M3508_UP_NORMAL;
 
 extern struct M3508_CLASS M3508_UP;//抬升电机初始化 CANid为5//是一个类里面有 	M3508_REAL_INFO REAL_INFO; PID MOTOR_PID;	int TARGET_RPM;		int SET_CURRENT;
 extern struct M3508_CLASS M3508_YAW;//云台电机初始化 CANid为6

@@ -24,7 +24,7 @@ void move_task(void *pvParameters)
 				{
 					if(AIR_L_LONG>950&&AIR_L_LONG<1250&&AIR_R_LONG>950&&AIR_R_LONG<1250&&MOVE_STATE==MOVE_STOP)//打高档和高档
 								{
-										ROBOT_SHOOTING=SHOOT_WAITING;
+										//ROBOT_SHOOTING=SHOOT_WAITING;
 										Free_Control();//遥控自由控制
 								}
 					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>950&&ROCK_L_X<1100)//打中档和左边左

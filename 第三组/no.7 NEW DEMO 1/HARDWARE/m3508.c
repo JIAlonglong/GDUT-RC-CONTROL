@@ -11,6 +11,7 @@ M3508_REAL_INFO M3508_CHASSIS_MOTOR_REAL_INFO[3] = {0};
 
 PID M3508_CHASSIS_MOTOR_PID_RPM[3];	// 3个M3508电机
 PID M3508_CAST_MOTOR_PID_RPM;	
+PID M3508_UP_NORMAL;
 
 
 //抬升机构和云台机构
@@ -71,7 +72,8 @@ void M3508_Motor_Init(void)
 	PID_parameter_init(&M3508_YAW.MOTOR_PID, 10.0, 1.0, 0.0, 16384, 16384,-0.1);
 	//需要s型规划的电机
 	PID_parameter_init(&M3508_TRANSATE.MOTOR_PID, 10.0, 1.0, 0.0, 16384, 16384,-0.1);
-	
+	//M3508_UP_NORMAL
+	PID_parameter_init(&M3508_UP_NORMAL, 50.0, 0.0, 1.0, 7000, 7000,-0.1);
 	/****LADRC****/
 	//三轮底盘
 	LADRC_Init(&ADRC_M3508_CHASIS[0],0.005,20,100,400,0.5,16384, -1);

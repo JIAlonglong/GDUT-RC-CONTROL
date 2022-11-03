@@ -5,6 +5,7 @@ void World_3wheels(float Vx_RPM, float Vy_RPM, float W_RPM, float theta);
 void move(void);
 void Free_Control(void);
 void Free_Control_Limit(void);
+void free_up(void);
 void RPM_MOTOR_PLANNING(void);
 void PUSH(float start,float end,float speedmax,float speedstart,float speedend,float ac,float de);
 #endif
