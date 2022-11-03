@@ -4,7 +4,7 @@
 ..\obj\bsp_air.o: ..\SYSTEM\sys\sys.h
 ..\obj\bsp_air.o: ..\USER\stm32f4xx.h
 ..\obj\bsp_air.o: ..\CORE\core_cm4.h
-..\obj\bsp_air.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\bsp_air.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\bsp_air.o: ..\CORE\core_cmInstr.h
 ..\obj\bsp_air.o: ..\CORE\core_cmFunc.h
 ..\obj\bsp_air.o: ..\CORE\core_cm4_simd.h
@@ -39,9 +39,9 @@
 ..\obj\bsp_air.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\bsp_air.o: ..\SYSTEM\delay\delay.h
 ..\obj\bsp_air.o: ..\SYSTEM\usart\usart.h
-..\obj\bsp_air.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\bsp_air.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\bsp_air.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\bsp_air.o: D:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\bsp_air.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\bsp_air.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\bsp_air.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\bsp_air.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\bsp_air.o: ..\HARDWARE\move.h
 ..\obj\bsp_air.o: ..\HARDWARE\path.h
 ..\obj\bsp_air.o: ..\FSM\FSM.h
-..\obj\bsp_air.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\bsp_air.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\bsp_air.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
-..\obj\bsp_air.o: D:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\bsp_air.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\bsp_air.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\bsp_air.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\bsp_air.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\bsp_air.o: ..\HARDWARE\LADRC.h

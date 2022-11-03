@@ -3,7 +3,7 @@
 ..\obj\jiguang.o: ..\SYSTEM\sys\sys.h
 ..\obj\jiguang.o: ..\USER\stm32f4xx.h
 ..\obj\jiguang.o: ..\CORE\core_cm4.h
-..\obj\jiguang.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\jiguang.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\jiguang.o: ..\CORE\core_cmInstr.h
 ..\obj\jiguang.o: ..\CORE\core_cmFunc.h
 ..\obj\jiguang.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\jiguang.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\jiguang.o: ..\SYSTEM\delay\delay.h
 ..\obj\jiguang.o: ..\SYSTEM\usart\usart.h
-..\obj\jiguang.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\jiguang.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\jiguang.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\jiguang.o: D:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\jiguang.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\jiguang.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\jiguang.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\jiguang.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\jiguang.o: ..\HARDWARE\move.h
 ..\obj\jiguang.o: ..\HARDWARE\path.h
 ..\obj\jiguang.o: ..\FSM\FSM.h
-..\obj\jiguang.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\jiguang.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\jiguang.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
-..\obj\jiguang.o: D:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\jiguang.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\jiguang.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\jiguang.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\jiguang.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\jiguang.o: ..\HARDWARE\LADRC.h

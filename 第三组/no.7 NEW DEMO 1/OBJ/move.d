@@ -3,7 +3,7 @@
 ..\obj\move.o: ..\SYSTEM\sys\sys.h
 ..\obj\move.o: ..\USER\stm32f4xx.h
 ..\obj\move.o: ..\CORE\core_cm4.h
-..\obj\move.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\move.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\move.o: ..\CORE\core_cmInstr.h
 ..\obj\move.o: ..\CORE\core_cmFunc.h
 ..\obj\move.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\move.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\move.o: ..\SYSTEM\delay\delay.h
 ..\obj\move.o: ..\SYSTEM\usart\usart.h
-..\obj\move.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\move.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\move.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\move.o: D:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\move.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\move.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\move.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\move.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\move.o: ..\HARDWARE\move.h
 ..\obj\move.o: ..\HARDWARE\path.h
 ..\obj\move.o: ..\FSM\FSM.h
-..\obj\move.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\move.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\move.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
-..\obj\move.o: D:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\move.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\move.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\move.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\move.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\move.o: ..\HARDWARE\LADRC.h

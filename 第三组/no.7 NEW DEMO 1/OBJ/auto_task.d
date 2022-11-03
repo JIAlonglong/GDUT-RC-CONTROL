@@ -3,7 +3,7 @@
 ..\obj\auto_task.o: ..\SYSTEM\sys\sys.h
 ..\obj\auto_task.o: ..\USER\stm32f4xx.h
 ..\obj\auto_task.o: ..\CORE\core_cm4.h
-..\obj\auto_task.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\auto_task.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\auto_task.o: ..\CORE\core_cmInstr.h
 ..\obj\auto_task.o: ..\CORE\core_cmFunc.h
 ..\obj\auto_task.o: ..\CORE\core_cm4_simd.h
@@ -38,9 +38,9 @@
 ..\obj\auto_task.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\auto_task.o: ..\SYSTEM\delay\delay.h
 ..\obj\auto_task.o: ..\SYSTEM\usart\usart.h
-..\obj\auto_task.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\auto_task.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\auto_task.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\auto_task.o: D:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\auto_task.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\auto_task.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\auto_task.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\auto_task.o: ..\FreeRTOS\include\portable.h
@@ -68,8 +68,8 @@
 ..\obj\auto_task.o: ..\HARDWARE\move.h
 ..\obj\auto_task.o: ..\HARDWARE\path.h
 ..\obj\auto_task.o: ..\FSM\FSM.h
-..\obj\auto_task.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\auto_task.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
-..\obj\auto_task.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
-..\obj\auto_task.o: D:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\auto_task.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\auto_task.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\auto_task.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\auto_task.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\auto_task.o: ..\HARDWARE\LADRC.h
