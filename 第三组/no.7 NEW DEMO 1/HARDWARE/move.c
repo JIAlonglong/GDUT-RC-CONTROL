@@ -199,7 +199,7 @@ void near_pillar(float distance,float POS_YAW,float V_max)
 	 point_traker_ladar_y_pid.outputmax = ABS(V_max);
 	
 	
-	ROBOT_TARGET_VELOCITY_DATA.Vy_RPM =point_traker_ladar_y_pid.output ;   
+	//ROBOT_TARGET_VELOCITY_DATA.Vy_RPM =point_traker_ladar_y_pid.output ;   
 	ROBOT_TARGET_VELOCITY_DATA.W_RPM=yaw_pid_ladar.output;
 		
 }

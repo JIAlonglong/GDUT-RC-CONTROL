@@ -35,63 +35,52 @@ void move_task(void *pvParameters)
 					  if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>1850&&ROCK_L_Y<2150)//打中档和左边上
 			          {
 										MOVE_STATE=MOVE_1_SHOOT;
-											if(MOVE_STATE==MOVE_STOP)
-										{
-											//										if(LaserLockPoint(ros_vx , ros_vy ,106,100))//单位cm   106
-											//										{
-											//											//Jiguang_Action_Update(0.0,0.0);
-											//										
-											//										}
-										}									
+											
+											v=0;
+											th=0;									
 									
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>1850&&ROCK_L_X<2150)//打中档和左边右
 			          {
 										MOVE_STATE=MOVE_2_SHOOT;
-											if(MOVE_STATE==MOVE_STOP)
-										{
-											//										if(LaserLockPoint(ros_vx , ros_vy ,106,100))//单位cm   106
-											//										{
-											//											//Jiguang_Action_Update(0.0,0.0);
-											//										
-											//										}
-										}																		
+										
+											v=0;
+											th=0;
+																					
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>950&&ROCK_L_Y<1100)//打中档和左边下
 			          {
 										MOVE_STATE=MOVE_3_SHOOT;
 											if(MOVE_STATE==MOVE_STOP)
 										{
-											//										if(LaserLockPoint(ros_vx , ros_vy ,106,100))//单位cm   106
-											//										{
-											//											//Jiguang_Action_Update(0.0,0.0);
-											//										
-											//										}
+											v=0;
+											th=0;
+											
 										}																		
+			          }
+						if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_X>950&&ROCK_R_X<1100)//打中档和右边左
+			          {
+										MOVE_STATE=MOVE_JI;//取环点
+											v=1;
+											th=1;
 			          }
 						if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_Y>1850&&ROCK_R_Y<2150)//打中档和右边上
 			          {
 										MOVE_STATE=MOVE_1_SHOOT_CLOSE;
-										if(MOVE_STATE==MOVE_STOP)
-										{
-											//YawAdjust(ros_vy+ROBOT_REAL_POS_DATA.POS_YAW);
-										}
+											v=1;
+											th=0;
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_X>1850&&ROCK_R_X<2150)//打中档和右边右
 			          {
 										MOVE_STATE=MOVE_2_SHOOT_CLOSE;
-										if(MOVE_STATE==MOVE_STOP)
-										{
-											//YawAdjust(ros_vy+ROBOT_REAL_POS_DATA.POS_YAW);
-										}
+											v=1;
+											th=0;
 			          }
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_Y>950&&ROCK_R_Y<1100)//打中档和右边下
 			          {
 										MOVE_STATE=MOVE_3_SHOOT_CLOSE;
-										if(MOVE_STATE==MOVE_STOP)
-										{
-											//YawAdjust(ros_vy+ROBOT_REAL_POS_DATA.POS_YAW);
-										}
+											v=1;
+											th=1;
 			          }
 			        if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>800&&AIR_R_LONG<1200)//打低档和高档
 			          {
@@ -110,14 +99,14 @@ void move_task(void *pvParameters)
 											PUSH(0,-1650,5000,4000,0,0.4,0.5);//范围：1000-10000
 									}
 									//LOCK LockupPoint
-//								if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
-//							{
-////										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm   106
-////										{
-////											//Jiguang_Action_Update(0.0,0.0);
-////										
-////										}
-//									}
+								if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
+							{
+										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm   106
+										{
+											//Jiguang_Action_Update(0.0,0.0);
+										
+										}
+									}			
 								}
 					 if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1460&&AIR_R_LONG<1540)//打低档和中档
 			          {
@@ -136,14 +125,14 @@ void move_task(void *pvParameters)
 											PUSH(0,-1650,9000,8000,0,0.4,0.5);//范围：1000-10000
 										}
 									//LOCK LockupPoint
-//									if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
-//									{
-////										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm
-////										{
-////											//Jiguang_Action_Update(0.0,0.0);
-////										
-////										}
-//									}
+									if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
+									{
+										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm
+										{
+											//Jiguang_Action_Update(0.0,0.0);
+										
+										}
+									}	
 								}
 					  if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1850&&AIR_R_LONG<2100)//打低档和低档
 			          {
@@ -163,14 +152,14 @@ void move_task(void *pvParameters)
 										}
 						  
 									//LOCK LockupPoint
-//									if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
-//									{
-////										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm
-////										{
-////											//Jiguang_Action_Update(0.0,0.0);
-////										
-////										}
-//									}
+									if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
+									{
+										if(LaserLockPoint(ros_vx , ros_vy ,100,100))//单位cm
+										{
+											//Jiguang_Action_Update(0.0,0.0);
+										
+										}
+									}
 								}
 					 
 

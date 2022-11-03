@@ -37,7 +37,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_2_SHOOT:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-2920, 78, 0,800))
+			if(moving_point_track(move_time_counter,-3174, 78, 0,800))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -61,7 +61,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_1_SHOOT_CLOSE:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-4900, 915, 0,250))
+			if(moving_point_track(move_time_counter,-5759, 1028, 0,250))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -69,7 +69,7 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_2_SHOOT_CLOSE:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-3174, 742, 0,250))
+			if(moving_point_track(move_time_counter,-3592, 952, 0,250))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
@@ -77,12 +77,20 @@ void Auto_Task(void *pvParameters)
 			 break;
 			case MOVE_3_SHOOT_CLOSE:
 				move_time_counter += 0.01f;
-			if(moving_point_track(move_time_counter,-1425, 915, 0,250))
+			if(moving_point_track(move_time_counter,-625, 915, 0,250))
 				{
 					move_time_counter = 0;
 					MOVE_STATE = MOVE_STOP;
 				}
 			 break;
+			case MOVE_JI:
+				move_time_counter += 0.01f;
+			if(moving_point_track(move_time_counter,-4037, 915, 0,250))
+				{
+					move_time_counter = 0;
+					MOVE_STATE = MOVE_STOP;
+				}
+			 break;	
 			
 			default:
 				break;

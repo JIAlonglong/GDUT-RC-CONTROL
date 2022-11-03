@@ -147,7 +147,8 @@ extern int VW;
 //ros
 extern int ros_vx,ros_vy,ros_vz,new_x,new_y,new_z;
 extern unsigned char rosctrl_flag;
-
+extern short v;
+extern short th;
 extern int mode_flag;
 
 
