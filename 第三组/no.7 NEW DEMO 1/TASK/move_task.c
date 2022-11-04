@@ -10,21 +10,12 @@ void move_task(void *pvParameters)
 						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-					 //实验							
-//			      if(1)//拉右边油杆
-//				      {
-//						ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
-//						ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
-//						ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
-//					    //PUSH PUSH UPDATE ANGLE
-//						PUSH(0,-4000,10000,9000,0,0.4,0.5);//void PUSH(float start,float end,float speedmax,float speedstart,float speedend,float ac,float de)
-//				      }
 				}
 		       else     
 				{
 					if(AIR_L_LONG>950&&AIR_L_LONG<1250&&AIR_R_LONG>950&&AIR_R_LONG<1250&&MOVE_STATE==MOVE_STOP)//打高档和高档
 								{
-										//ROBOT_SHOOTING=SHOOT_WAITING;
+										MOVE_STATE=MOVE_STOP;
 										Free_Control();//遥控自由控制
 								}
 					if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>950&&ROCK_L_X<1100)//打中档和左边左
@@ -35,50 +26,46 @@ void move_task(void *pvParameters)
 					  if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>1850&&ROCK_L_Y<2150)//打中档和左边上
 			          {
 										MOVE_STATE=MOVE_1_SHOOT;
-											
 											v=0;
 											th=0;									
-									
-			          }
+								}
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_X>1850&&ROCK_L_X<2150)//打中档和左边右
 			          {
 										MOVE_STATE=MOVE_2_SHOOT;
-										
-											v=0;
-											th=0;
-																					
-			          }
+										v=0;
+										th=0;
+								}
 					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_L_Y>950&&ROCK_L_Y<1100)//打中档和左边下
 			          {
 										MOVE_STATE=MOVE_3_SHOOT;
-											if(MOVE_STATE==MOVE_STOP)
-										{
 											v=0;
 											th=0;
-											
-										}																		
-			          }
-						if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_X>950&&ROCK_R_X<1100)//打中档和右边左
+								}
+						if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_X>950&&ROCK_R_X<1100)//打中档和右边左 up==4(发射都是打中档)
 			          {
 										MOVE_STATE=MOVE_JI;//取环点
+											up_flag=4;
 											v=1;
 											th=1;
 			          }
-						if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_Y>1850&&ROCK_R_Y<2150)//打中档和右边上
+						if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_Y>1850&&ROCK_R_Y<2150)//打中档和右边上 up==1 (发射都是打中档)
 			          {
 										MOVE_STATE=MOVE_1_SHOOT_CLOSE;
+											up_flag=1;
 											v=1;
 											th=0;
 			          }
-					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_X>1850&&ROCK_R_X<2150)//打中档和右边右
+					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_X>1850&&ROCK_R_X<2150)//打中档和右边右 up==5 (发射都是打中档)
 			          {
 										MOVE_STATE=MOVE_2_SHOOT_CLOSE;
+											up_flag=5;
 											v=1;
 											th=0;
 			          }
-					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_Y>950&&ROCK_R_Y<1100)//打中档和右边下
+					 if(AIR_L_LONG>1460&&AIR_L_LONG<1540&&ROCK_R_Y>950&&ROCK_R_Y<1100)//打中档和右边下 up==6 (发射都是打中档)
 			          {
 										MOVE_STATE=MOVE_3_SHOOT_CLOSE;
+											up_flag=6;
 											v=1;
 											th=1;
 			          }

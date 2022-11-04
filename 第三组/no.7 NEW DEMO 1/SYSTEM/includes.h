@@ -141,6 +141,7 @@ extern struct M3508_CLASS M3508_TRANSATE;
 ****************************************************************/
 extern float Velocity_A,Velocity_B,Velocity_C;
 extern int manual_move_mode;//(mode=0:世界坐标；mode=1:局部坐标)
+extern int up_flag;
 //小车三个方向的速度
 extern float VX,VY;
 extern int VW;

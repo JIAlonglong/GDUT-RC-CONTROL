@@ -6,6 +6,7 @@ void move(void);
 void Free_Control(void);
 void Free_Control_Limit(void);
 void free_up(void);
+void up(int angle);
 void RPM_MOTOR_PLANNING(void);
 void PUSH(float start,float end,float speedmax,float speedstart,float speedend,float ac,float de);
 #endif

@@ -1,5 +1,6 @@
 #include "includes.h"
 int speed_factor;
+int up_flag;
 void Robot_state_task(void *pvParamerters)//机器人状态
 {
 	while(1)
@@ -51,9 +52,19 @@ void Robot_state_task(void *pvParamerters)//机器人状态
 			
 		 
 			
-			case ROBOT_SHOOT_HIGH:
+			case ROBOT_SHOOT_HIGH://包含special
 			
-				UP_ARM_NOW_MOTION=&UP_ON2;
+				if(up_flag==1)
+				{UP_ARM_NOW_MOTION=&UP_ON2;}
+				if(up_flag==4)
+				{UP_ARM_NOW_MOTION=&UP_INIT;
+				up(1000);}//这里用串极pid控制，直接给目标路程，参考之前的UP_ARM_NOW_MOTION
+				if(up_flag==5)
+				{UP_ARM_NOW_MOTION=&UP_INIT;
+				up(1000);}
+				if(up_flag==6)
+				{UP_ARM_NOW_MOTION=&UP_INIT;
+				up(1000);}
 					float time_H=0;
 //        if(up_finished==1)
 //				{

@@ -1,6 +1,6 @@
 Dependencies for Project 'FreeRTOS', Target 'FreeRTOS': (DO NOT MODIFY !)
 F (.\main.c)(0x63589D5D)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -58,10 +58,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -145,7 +145,7 @@ I (..\FWLIB\inc\stm32f4xx_dac.h)(0x63589D56)
 I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x63589D56)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x63589D56)
 F (..\HARDWARE\action.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\action.o --omf_browse ..\obj\action.crf --depend ..\obj\action.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -203,10 +203,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -218,7 +218,7 @@ I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\bsp_air.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_air.o --omf_browse ..\obj\bsp_air.crf --depend ..\obj\bsp_air.d)
 I (..\HARDWARE\bsp_air.h)(0x63589D56)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -275,10 +275,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -289,7 +289,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\can.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\can.o --omf_browse ..\obj\can.crf --depend ..\obj\can.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -347,10 +347,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -360,8 +360,8 @@ I (D:\keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
-F (..\HARDWARE\control.c)(0x636421FF)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\control.o --omf_browse ..\obj\control.crf --depend ..\obj\control.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+F (..\HARDWARE\control.c)(0x63645A70)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\control.o --omf_browse ..\obj\control.crf --depend ..\obj\control.d)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -419,10 +419,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -433,7 +433,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\move.c)(0x63641CBB)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\move.o --omf_browse ..\obj\move.crf --depend ..\obj\move.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -491,10 +491,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -505,7 +505,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\path.c)(0x63631996)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\path.o --omf_browse ..\obj\path.crf --depend ..\obj\path.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -563,10 +563,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -577,7 +577,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\pid.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pid.o --omf_browse ..\obj\pid.crf --depend ..\obj\pid.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -635,10 +635,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -649,7 +649,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\pstwo.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pstwo.o --omf_browse ..\obj\pstwo.crf --depend ..\obj\pstwo.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -707,10 +707,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -723,13 +723,13 @@ I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\action.h)(0x63589D56)()
 F (..\HARDWARE\bsp_air.h)(0x63589D56)()
 F (..\HARDWARE\can.h)(0x63589D56)()
-F (..\HARDWARE\control.h)(0x63637560)()
-F (..\HARDWARE\m3508.h)(0x63637B0F)()
+F (..\HARDWARE\control.h)(0x63645A70)()
+F (..\HARDWARE\m3508.h)(0x63645A70)()
 F (..\HARDWARE\move.h)(0x63643D48)()
 F (..\HARDWARE\pid.h)(0x63589D56)()
 F (..\HARDWARE\pstwo.h)(0x63589D56)()
-F (..\HARDWARE\m3508.c)(0x63637B0F)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\m3508.o --omf_browse ..\obj\m3508.crf --depend ..\obj\m3508.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+F (..\HARDWARE\m3508.c)(0x63645A70)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\m3508.o --omf_browse ..\obj\m3508.crf --depend ..\obj\m3508.d)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -787,10 +787,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -801,7 +801,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\TMOTOR.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\tmotor.o --omf_browse ..\obj\tmotor.crf --depend ..\obj\tmotor.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -859,10 +859,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -875,7 +875,7 @@ I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\TMOTOR.h)(0x63589D56)()
 F (..\HARDWARE\path.h)(0x63589D56)()
 F (..\HARDWARE\laser.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\laser.o --omf_browse ..\obj\laser.crf --depend ..\obj\laser.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -933,10 +933,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -987,7 +987,7 @@ I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x63589D56)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x63589D56)
 F (..\HARDWARE\ladrc.h)(0x63589D56)()
 F (..\HARDWARE\MIT.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\mit.o --omf_browse ..\obj\mit.crf --depend ..\obj\mit.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -1045,10 +1045,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -1060,7 +1060,7 @@ I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\HARDWARE\MIT.h)(0x63589D56)()
 F (..\HARDWARE\jiguang.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\jiguang.o --omf_browse ..\obj\jiguang.crf --depend ..\obj\jiguang.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -1118,10 +1118,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -1263,7 +1263,7 @@ I (..\FreeRTOS\include\portable.h)(0x63589D56)
 I (..\FreeRTOS\include\deprecated_definitions.h)(0x63589D56)
 I (..\FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h)(0x63589D56)
 I (..\FreeRTOS\include\mpu_wrappers.h)(0x63589D56)
-F (..\SYSTEM\includes.h)(0x63644053)()
+F (..\SYSTEM\includes.h)(0x63645A6E)()
 F (..\CORE\startup_stm32f40_41xxx.s)(0x63589D56)(--cpu Cortex-M4.fp -g --apcs=interwork -I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include--pd "__UVISION_VERSION SETA 522" --pd "STM32F407xx SETA 1"--list ..\obj\startup_stm32f40_41xxx.lst --xref -o ..\obj\startup_stm32f40_41xxx.o --depend ..\obj\startup_stm32f40_41xxx.d)
 F (..\FreeRTOS\croutine.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\croutine.o --omf_browse ..\obj\croutine.crf --depend ..\obj\croutine.d)
 I (..\FreeRTOS\include\FreeRTOS.h)(0x63589D56)
@@ -1666,7 +1666,7 @@ I (..\FreeRTOS\include\task.h)(0x63589D56)
 I (..\FreeRTOS\include\list.h)(0x63589D56)
 F (..\readme.txt)(0x63589D5D)()
 F (..\TASK\Auto_Task.c)(0x636448F5)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\auto_task.o --omf_browse ..\obj\auto_task.crf --depend ..\obj\auto_task.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -1724,10 +1724,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -1737,8 +1737,8 @@ I (D:\keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
-F (..\TASK\Robot_state_task.c)(0x63613123)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\robot_state_task.o --omf_browse ..\obj\robot_state_task.crf --depend ..\obj\robot_state_task.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+F (..\TASK\Robot_state_task.c)(0x63645AAC)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\robot_state_task.o --omf_browse ..\obj\robot_state_task.crf --depend ..\obj\robot_state_task.d)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -1796,10 +1796,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -1810,7 +1810,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\TASK\data_update.c)(0x63644678)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\data_update.o --omf_browse ..\obj\data_update.crf --depend ..\obj\data_update.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -1868,10 +1868,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -1881,8 +1881,8 @@ I (D:\keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
-F (..\TASK\move_task.c)(0x63644724)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\move_task.o --omf_browse ..\obj\move_task.crf --depend ..\obj\move_task.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+F (..\TASK\move_task.c)(0x63645AA4)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\move_task.o --omf_browse ..\obj\move_task.crf --depend ..\obj\move_task.d)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -1940,10 +1940,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -1954,7 +1954,7 @@ I (D:\keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\TASK\MotorVelocityCurve.c)(0x63589D5D)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\motorvelocitycurve.o --omf_browse ..\obj\motorvelocitycurve.crf --depend ..\obj\motorvelocitycurve.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -2012,10 +2012,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -3255,7 +3255,7 @@ I (..\FWLIB\inc\stm32f4xx_can.h)(0x63589D56)
 I (..\FWLIB\inc\stm32f4xx_dac.h)(0x63589D56)
 I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x63589D56)
 F (..\FSM\FSM.c)(0x63589D56)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\fsm.o --omf_browse ..\obj\fsm.crf --depend ..\obj\fsm.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -3313,10 +3313,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)
@@ -3328,7 +3328,7 @@ I (D:\keil5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\HARDWARE\LADRC.h)(0x63589D56)
 F (..\FSM\FSM.h)(0x63589D56)()
 F (..\ROS\ros.c)(0x63589D5D)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\TASK -I ..\SYSTEM -I ..\HARDWARE -I ..\FWLIB\src -I ..\FSM -I ..\ROS-I"E:\github\GDUT-RC-CONTROL\第三组\no.7 NEW DEMO 1\USER\RTE\_FreeRTOS"-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil5\ARM\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="522" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\ros.o --omf_browse ..\obj\ros.crf --depend ..\obj\ros.d)
-I (..\SYSTEM\includes.h)(0x63644053)
+I (..\SYSTEM\includes.h)(0x63645A6E)
 I (..\SYSTEM\sys\sys.h)(0x63589D5D)
 I (..\USER\stm32f4xx.h)(0x63589D5D)
 I (..\CORE\core_cm4.h)(0x63589D56)
@@ -3386,10 +3386,10 @@ I (..\HARDWARE\laser.h)(0x63589D56)
 I (..\HARDWARE\imu_location.h)(0x63589D56)
 I (..\HARDWARE\jiguang.h)(0x63589D56)
 I (..\HARDWARE\pid.h)(0x63589D56)
-I (..\HARDWARE\m3508.h)(0x63637B0F)
+I (..\HARDWARE\m3508.h)(0x63645A70)
 I (..\HARDWARE\TMOTOR.h)(0x63589D56)
 I (..\HARDWARE\MIT.h)(0x63589D56)
-I (..\HARDWARE\control.h)(0x63637560)
+I (..\HARDWARE\control.h)(0x63645A70)
 I (..\HARDWARE\action.h)(0x63589D56)
 I (..\HARDWARE\move.h)(0x63643D48)
 I (..\HARDWARE\path.h)(0x63589D56)

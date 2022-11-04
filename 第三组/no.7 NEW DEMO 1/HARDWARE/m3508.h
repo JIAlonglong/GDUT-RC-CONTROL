@@ -75,6 +75,9 @@ extern struct ARM_VELOCITY_PLANNING   UP_INIT;//抬升机构初始化
 extern struct ARM_VELOCITY_PLANNING   UP_ON1;//抬升
 extern struct ARM_VELOCITY_PLANNING   UP_ON2;//抬升
 extern struct ARM_VELOCITY_PLANNING   UP_ON3;//抬升
+extern struct ARM_VELOCITY_PLANNING   UP_ON4;
+extern struct ARM_VELOCITY_PLANNING   UP_ON5;
+extern struct ARM_VELOCITY_PLANNING   UP_ON6;
 extern struct ARM_VELOCITY_PLANNING   UP_DOWN3;//下降
 
 extern struct ARM_VELOCITY_PLANNING  *YAW_ARM_NOW_MOTION;		 // 指向云台当前动作
