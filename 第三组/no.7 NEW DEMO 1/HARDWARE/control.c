@@ -159,9 +159,10 @@ void move()
 
 
 }	
-	
+int flag;	
 void Free_Control(void)
 {
+				flag=1;
 					if(ROCK_L_Y>1460&&ROCK_L_Y<1540)   ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 				 else if(ROCK_L_Y>=1540) ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=(ROCK_L_Y-1540)*2;
 				 else if(ROCK_L_Y<=1460) ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=(ROCK_L_Y-1460)*2;
@@ -183,6 +184,7 @@ void Free_Control(void)
 
 void Free_Control_Limit(void)
 {
+					flag=1;
 					if(ROCK_L_Y>1160&&ROCK_L_Y<1840)   ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 				 else if(ROCK_L_Y>=1840) ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=(ROCK_L_Y-1840)*0.1;
 				 else if(ROCK_L_Y<=1160) ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=(ROCK_L_Y-1160)*0.1;
@@ -197,7 +199,7 @@ void Free_Control_Limit(void)
 				 else if(ROCK_R_X>=1800) ROBOT_TARGET_VELOCITY_DATA.W_RPM=-(ROCK_R_X-1800)*0.1;
 				 else if(ROCK_R_X<=1200) ROBOT_TARGET_VELOCITY_DATA.W_RPM=-(ROCK_R_X-1200)*0.1;
 					
-//				free_up();	
+					//free_up();	
 
 
 
@@ -206,23 +208,27 @@ void Free_Control_Limit(void)
 
 void free_up(void)
 {
-//	if(UP_ARM_NOW_MOTION==&UP_INIT){M3508_UP.TARGET_ANGLE=0;}
-//	if(UP_ARM_NOW_MOTION==&UP_ON1){M3508_UP.TARGET_ANGLE=-2700;}
-//	if(UP_ARM_NOW_MOTION==&UP_ON2){M3508_UP.TARGET_ANGLE=-10000;}	
-//	if(UP_ARM_NOW_MOTION==&UP_ON3){M3508_UP.TARGET_ANGLE=-11000;}
+//	M3508_UP.TARGET_ANGLE=angle_1;
 	PID_position_PID_calculation(&M3508_UP_NORMAL,M3508_UP.REAL_INFO.REAL_ANGLE,M3508_UP.TARGET_ANGLE);
 	M3508_UP.REAL_INFO.TARGET_RPM=M3508_UP_NORMAL.output;
 	PID_incremental_PID_calculation(&M3508_UP.MOTOR_PID,M3508_UP.REAL_INFO.RPM,M3508_UP.REAL_INFO.TARGET_RPM);
 	M3508_UP.REAL_INFO.TARGET_CURRENT = M3508_UP.MOTOR_PID.output;
-	 if(ROCK_R_Y>1400&&ROCK_R_Y<1600)   M3508_UP.TARGET_ANGLE+=0;
-	else if(ROCK_R_Y>=1600) M3508_UP.TARGET_ANGLE-=10;
-	else if(ROCK_R_Y<=1400) M3508_UP.TARGET_ANGLE+=10;
+	 if(ROCK_R_Y>1400&&ROCK_R_Y<2200)   {M3508_UP.TARGET_ANGLE+=0;}
+	else if(ROCK_R_Y>=1300) {M3508_UP.TARGET_ANGLE-=10;}
+	else if(ROCK_R_Y<=1100) {M3508_UP.TARGET_ANGLE+=10;}
 	chassis_m3508_m2006_send_motor_currents_can1();
 
 }
 
 void up(int angle)
 {
+	int up=0;
+	up-=10;
+	if(ABS(up-angle)<2)
+	{
+		up-=0;
+		M3508_UP.TARGET_ANGLE=up;
+	}
 	PID_position_PID_calculation(&M3508_UP_NORMAL,M3508_UP.REAL_INFO.REAL_ANGLE,M3508_UP.TARGET_ANGLE);
 	M3508_UP.REAL_INFO.TARGET_RPM=M3508_UP_NORMAL.output;
 	PID_incremental_PID_calculation(&M3508_UP.MOTOR_PID,M3508_UP.REAL_INFO.RPM,M3508_UP.REAL_INFO.TARGET_RPM);

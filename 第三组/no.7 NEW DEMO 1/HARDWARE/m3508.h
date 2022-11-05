@@ -4,6 +4,7 @@
 extern int start,end;
 extern int transate_finished;
 extern int up_finished;
+extern 	float angle_1;
 // M3508返回的电机真实信息
 typedef struct M3508_REAL_INFO
 {

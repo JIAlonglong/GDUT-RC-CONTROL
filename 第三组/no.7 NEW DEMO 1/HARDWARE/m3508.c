@@ -30,9 +30,9 @@ ARM_VELOCITY_PLANNING   UP_INIT={0};//实验用
 ARM_VELOCITY_PLANNING   UP_ON1	 ={0,        -2700,          2500,                3500,            0,          0.4,         0.3};
 ARM_VELOCITY_PLANNING   UP_ON2	 ={-2700,        -10000,          3500,                4500,            0,          0.4,         0.3};
 ARM_VELOCITY_PLANNING   UP_ON3	 ={-10000,       -11000,         2500,             3500,            0,          0.4,         0.2};
-ARM_VELOCITY_PLANNING   UP_ON4	 ={0};
-ARM_VELOCITY_PLANNING   UP_ON5	 ={0};
-ARM_VELOCITY_PLANNING   UP_ON6	 ={0};
+ARM_VELOCITY_PLANNING   UP_ON4	 ={-5000,        -6000,          3500,                4500,            0,          0.4,         0.3};
+ARM_VELOCITY_PLANNING   UP_ON5	 ={-6000,        -7000,          3500,                4500,            0,          0.4,         0.3};
+ARM_VELOCITY_PLANNING   UP_ON6	 ={-8000,        -10000,          3500,                4500,            0,          0.4,         0.3};
 ARM_VELOCITY_PLANNING   UP_DOWN3={-11000,           0,         3500,             4500,            0,          0.2,         0.3};
 	
 
@@ -76,7 +76,7 @@ void M3508_Motor_Init(void)
 	//需要s型规划的电机
 	PID_parameter_init(&M3508_TRANSATE.MOTOR_PID, 10.0, 1.0, 0.0, 16384, 16384,-0.1);
 	//M3508_UP_NORMAL
-	PID_parameter_init(&M3508_UP_NORMAL, 50.0, 0.0, 1.0, 7000, 7000,-0.1);
+	PID_parameter_init(&M3508_UP_NORMAL, 4.0, 0.0, 0.001, 7000, 7000,10);
 	/****LADRC****/
 	//三轮底盘
 	LADRC_Init(&ADRC_M3508_CHASIS[0],0.005,20,100,400,0.5,16384, -1);
@@ -261,6 +261,7 @@ void M3508AngleIntegral(M3508_REAL_INFO *M3508_MOTOR)
 	M3508_MOTOR->LAST_ANGLE = M3508_MOTOR->ANGLE;
 }
 int up_finished;
+float angle_1=0.0;
 // 规划抬升机构应有的RPM
 //								*ARM_NOW_MOTION 	M3508_ARM_MOTOR_REAL_INFO.REAL_ANGLE[处理过的真实角度]
 void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			)	
@@ -327,6 +328,7 @@ void ad_plan_arm_motor_RPM_UP(ARM_VELOCITY_PLANNING motion, 							float pos			)
 	//LADRC
 //	LADRC_Loop(&ADRC_M3508_UP,M3508_UP.REAL_INFO.RPM ,UP_MOTOR_TARGET_RPM);
 //	M3508_UP.REAL_INFO.TARGET_CURRENT=ADRC_M3508_UP.u;
+	angle_1=M3508_UP.REAL_INFO.REAL_ANGLE;
 }
 
 // 规划云台电机应有的RPM
