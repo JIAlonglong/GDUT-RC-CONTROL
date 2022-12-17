@@ -1,0 +1,29 @@
+#ifndef __FSM__H_
+#define __FSM__H_
+
+
+typedef enum
+{
+	SHOOT_INIT,
+	SHOOT_WAITING,
+	ROBOT_PICK,
+	ROBOT_SHOTH,
+	ROBOT_MIDDLE,
+	ROBOT_HIGH,
+}ROBOT_SHOOT;
+
+typedef enum
+{
+	SHOOT_WAITING1,
+	SHOOTING,
+
+}AUTO_SHOOT;
+extern ROBOT_SHOOT ROBOT_SHOOTING;
+extern AUTO_SHOOT AUTO_SHOOTING;
+
+void FSM_Init(void);
+
+
+#endif 
+
+

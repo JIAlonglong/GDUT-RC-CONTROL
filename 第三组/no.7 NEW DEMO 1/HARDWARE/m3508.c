@@ -20,7 +20,7 @@ int16_t YAW_MOTOR_TARGET_RPM ;    // 云台电机目标速度
 int16_t TRANSATE_MOTOR_TARGET_RPM;
 
 M3508_CLASS M3508_UP;//抬升电机初始化 CANid为5//是一个类里面有 	M3508_REAL_INFO REAL_INFO; PID MOTOR_PID;	int TARGET_RPM;		int SET_CURRENT;
-M3508_CLASS M3508_YAW;//云台电机初始化 CANid为6
+M3508_CLASS M3508_YAW;//云台电机初始化 CANid为6 hh
 M3508_CLASS M3508_TRANSATE;//传递电机初始化 CANid为7
 
 
@@ -29,11 +29,11 @@ ARM_VELOCITY_PLANNING  *UP_ARM_NOW_MOTION;		 // 指向抬升当前动作
 ARM_VELOCITY_PLANNING   UP_INIT={0};//实验用
 ARM_VELOCITY_PLANNING   UP_ON1	 ={0,        -2700,          2500,                3500,            0,          0.4,         0.3};
 ARM_VELOCITY_PLANNING   UP_ON2	 ={-2700,        -10000,          3500,                4500,            0,          0.4,         0.3};
-ARM_VELOCITY_PLANNING   UP_ON3	 ={-10000,       -11000,         2500,             3500,            0,          0.4,         0.2};
-ARM_VELOCITY_PLANNING   UP_ON4	 ={-5000,        -6000,          3500,                4500,            0,          0.4,         0.3};
-ARM_VELOCITY_PLANNING   UP_ON5	 ={-6000,        -7000,          3500,                4500,            0,          0.4,         0.3};
-ARM_VELOCITY_PLANNING   UP_ON6	 ={-8000,        -10000,          3500,                4500,            0,          0.4,         0.3};
-ARM_VELOCITY_PLANNING   UP_DOWN3={-11000,           0,         3500,             4500,            0,          0.2,         0.3};
+ARM_VELOCITY_PLANNING   UP_ON3	 ={-10000,       -3000,         2500,             3500,            0,          0.4,         0.2};
+//ARM_VELOCITY_PLANNING   UP_ON4	 ={-5000,        -6000,          3500,                4500,            0,          0.4,         0.3};
+//ARM_VELOCITY_PLANNING   UP_ON5	 ={-6000,        -7000,          3500,                4500,            0,          0.4,         0.3};
+//ARM_VELOCITY_PLANNING   UP_ON6	 ={-8000,        -10000,          3500,                4500,            0,          0.4,         0.3};
+ARM_VELOCITY_PLANNING   UP_DOWN3={-3000,           0,         3500,             4500,            0,          0.2,         0.3};
 	
 
 ARM_VELOCITY_PLANNING  *YAW_ARM_NOW_MOTION;		 // 指向云台当前动作

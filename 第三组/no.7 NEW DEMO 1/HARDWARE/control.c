@@ -235,6 +235,37 @@ void up(int angle)
 	M3508_UP.REAL_INFO.TARGET_CURRENT = M3508_UP.MOTOR_PID.output;
 }
 
+void U8(int target)
+{
+					float time_H=0;
+					int up=0;
+					int true_data=0;
+          true_data=target+up+50;					
+						AK80_Speed_Control(AK80_ID1,0);
+						AK80_Speed_Control(AK80_ID2,0);
+					time_H++;
+					if(time_H>5000&&time_H<7000)
+					{
+						up+=10;
+						if(time_H>6999)
+						{
+							up=0;
+						time_H=0;
+						}
+						if(true_data>target+100)
+						{
+							U8_contorl_2(target);
+						}
+						U8_contorl_2(true_data);
+					}
+					else 
+					{
+					U8_contorl_2(target);
+					}
+
+
+}
+
 void RPM_MOTOR_PLANNING(void)
 {
 	ad_plan_arm_motor_RPM_UP(*UP_ARM_NOW_MOTION,M3508_UP.REAL_INFO.REAL_ANGLE);

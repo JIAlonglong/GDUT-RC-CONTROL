@@ -72,19 +72,20 @@ void move_task(void *pvParameters)
 			          }
 			        if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>800&&AIR_R_LONG<1200)//¥ÚµÕµµ∫Õ∏ﬂµµ
 			          {
+									MOVE_STATE==MOVE_STOP;
 			            ROBOT_SHOOTING=ROBOT_SHOOT_OUR;//…‰Œ“∑Ω÷˘◊”(GET)
 									if(MOVE_STATE==MOVE_STOP)
 									{
 											Free_Control_Limit();
 									}
-										if(ROCK_R_Y>1600)//¿≠”“±ﬂ”Õ∏À
+										if(ROCK_R_Y>1800)//¿≠”“±ﬂ”Õ∏À
 									{
 										M3508_TRANSATE.REAL_INFO.REAL_ANGLE=0;
 											ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 													//PUSH PUSH UPDATE ANGLE
-											PUSH(0,-1650,5000,4000,0,0.4,0.5);//∑∂Œß£∫1000-10000
+											PUSH(0,-1480,5000,4000,0,0.4,0.5);//∑∂Œß£∫1000-10000
 									}
 									//LOCK LockupPoint
 								if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
@@ -98,19 +99,20 @@ void move_task(void *pvParameters)
 								}
 					 if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1460&&AIR_R_LONG<1540)//¥ÚµÕµµ∫Õ÷–µµ
 			          {
+									MOVE_STATE==MOVE_STOP;
 			            ROBOT_SHOOTING=ROBOT_SHOOT_HIGH;//…‰÷–º‰÷˘◊”(62 GET)
 									if(MOVE_STATE==MOVE_STOP)
 									{
 											Free_Control_Limit();
 									}									
-										if(ROCK_R_Y>1600)//¿≠”“±ﬂ”Õ∏À
+										if(ROCK_R_Y>1800)//¿≠”“±ﬂ”Õ∏À
 										{
 											M3508_TRANSATE.REAL_INFO.REAL_ANGLE=0;
 											ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-											PUSH(0,-1650,9000,8000,0,0.4,0.5);//∑∂Œß£∫1000-10000
+											PUSH(0,-1450,9000,8000,0,0.4,0.5);//∑∂Œß£∫1000-10000
 										}
 									//LOCK LockupPoint
 									if(MOVE_STATE==MOVE_STOP&&ROCK_L_Y<1600)
@@ -124,19 +126,20 @@ void move_task(void *pvParameters)
 								}
 					  if(AIR_L_LONG<2100&&AIR_L_LONG>1850&&AIR_R_LONG>1850&&AIR_R_LONG<2100)//¥ÚµÕµµ∫ÕµÕµµ
 			          {
+									MOVE_STATE==MOVE_STOP;
 			            ROBOT_SHOOTING=ROBOT_SHOOT_TH;//…‰∂‘∑Ω÷˘◊”
 									if(MOVE_STATE==MOVE_STOP)
 									{
 											Free_Control_Limit();
 									}
-										if(ROCK_R_Y>1600)//¿≠”“±ﬂ”Õ∏À
+										if(ROCK_R_Y>1800)//¿≠”“±ﬂ”Õ∏À
 										{
 										M3508_TRANSATE.REAL_INFO.REAL_ANGLE=0;
 											ROBOT_TARGET_VELOCITY_DATA.Vy_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.Vx_RPM=0;
 											ROBOT_TARGET_VELOCITY_DATA.W_RPM=0;
 										//PUSH PUSH UPDATE ANGLE
-											PUSH(0,-1650,9000,8000,0,0.4,0.5);//∑∂Œß£∫1000-10000
+											PUSH(0,-1450,9000,8000,0,0.7,0.3);//∑∂Œß£∫1000-10000
 										}
 						  
 									//LOCK LockupPoint
